@@ -1,0 +1,71 @@
+class people::calorie {
+  include chrome
+  include mysql
+  include imagemagick
+  include libtool
+  include alfred
+  include skype
+  include zsh
+  include iterm2::stable
+  include python
+  include pkgconfig
+  include appcleaner
+
+  package {
+    [
+      'wget',
+      'tmux',
+      'fontforge',
+      'ctags',
+      'cmake',
+      'lua',
+      'luajit',
+      'reattach-to-user-namespace',
+      'the_silver_searcher',
+      'macvim',
+    ]:
+  }
+
+  $home     = "/Users/${::luser}"
+  $dotfiles = "${home}/dotfiles"
+  $work     = "${home}/work"
+
+  Git::Config::Global <| title == "core.excludesfile" |> {
+    value => "~/.gitignore"
+  }
+
+  file { "${work}":
+    ensure => "directory",
+  }
+
+  # coffeescript
+  nodejs::module { 'coffee-script':
+    node_version => 'v0.10'
+  }
+
+  # vichrome
+  $vichrome = "${work}/vichrome"
+  repository { $vichrome:
+    source  => "calorie/ViChrome"
+  }
+  exec { "make":
+    cwd => $vichrome,
+    creates => "${vichrome}/vichrome.js",
+    require => Repository[$vichrome]
+  }
+
+  # hg
+  exec { "pip install mercurial":
+    creates => "${boxen::config::homebrewdir}/share/python/hg"
+  }
+
+  # dotfiles
+  repository { $dotfiles:
+    source  => "calorie/dotfiles"
+  }
+  exec { "echo y|${dotfiles}/setup.sh":
+    cwd => $dotfiles,
+    creates => "${home}/.vimrc",
+    require => Repository[$dotfiles]
+  }
+}

@@ -81,6 +81,7 @@ github "vim",         "1.0.5"
 github "tmux",        "1.0.2"
 github "ctags",       "1.0.0"
 github "appcleaner",  "1.0.0"
+github "hipchat",     "1.0.8"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

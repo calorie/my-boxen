@@ -10,6 +10,7 @@ class people::calorie {
   include python
   include pkgconfig
   include appcleaner
+  include hipchat
 
   package {
     [
@@ -23,6 +24,7 @@ class people::calorie {
       'reattach-to-user-namespace',
       'the_silver_searcher',
       'macvim',
+      'rmtrash',
     ]:
   }
 
@@ -67,5 +69,10 @@ class people::calorie {
     cwd => $dotfiles,
     creates => "${home}/.vimrc",
     require => Repository[$dotfiles]
+  }
+
+  ruby::plugin { 'rbenv-binstubs':
+    ensure => '1.3',
+    source => 'ianheggie/rbenv-binstubs'
   }
 }

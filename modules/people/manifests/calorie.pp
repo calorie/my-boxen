@@ -31,6 +31,16 @@ class people::calorie {
   $home     = "/Users/${::luser}"
   $dotfiles = "${home}/dotfiles"
   $work     = "${home}/work"
+  $ruby_env = {
+    'RUBY_CONFIGURE_OPTS' => "--with-openssl-dir=${boxen::config::homebrewdir}/opt/openssl --enable-shared --with-readline-dir=${boxen::config::homebrewdir}/opt/readline"
+  }
+
+  ruby::version { '2.0.0-p247':
+    env => $ruby_env
+  }
+
+  # class { 'ruby::global': version => '2.0.0-p247' }
+  class { 'nodejs::global': version => 'v0.10.21' }
 
   Git::Config::Global <| title == "core.excludesfile" |> {
     value => "~/.gitignore"
@@ -42,7 +52,7 @@ class people::calorie {
 
   # coffeescript
   nodejs::module { 'coffee-script':
-    node_version => 'v0.10'
+    node_version => 'v0.10.21'
   }
 
   # vichrome
@@ -71,6 +81,7 @@ class people::calorie {
     require => Repository[$dotfiles]
   }
 
+  # rbenv-binstubs
   ruby::plugin { 'rbenv-binstubs':
     ensure => '1.3',
     source => 'ianheggie/rbenv-binstubs'

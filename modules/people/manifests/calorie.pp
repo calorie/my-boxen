@@ -11,6 +11,8 @@ class people::calorie {
   include pkgconfig
   include appcleaner
   include hipchat
+  include dropbox
+  include java
 
   package {
     [

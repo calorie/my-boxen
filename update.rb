@@ -28,6 +28,7 @@ def update(line)
 end
 
 def read(file)
+  file = './Puppetfile' if ARGV.empty?
   flg = false
   lines = File.readlines(file)
   lines.map do |l|

@@ -30,6 +30,7 @@ class people::calorie {
       'the_silver_searcher',
       'macvim',
       'rmtrash',
+      'tig',
     ]:
   }
 

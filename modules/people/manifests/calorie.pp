@@ -13,6 +13,9 @@ class people::calorie {
   include hipchat
   include dropbox
   include java
+  include evernote
+  include jumpcut
+  include flux
 
   package {
     [

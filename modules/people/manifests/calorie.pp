@@ -16,6 +16,7 @@ class people::calorie {
   include evernote
   include jumpcut
   include flux
+  include keyremap4macbook
 
   package {
     [

@@ -84,6 +84,7 @@ github "appcleaner",  "1.0.0"
 github "hipchat",     "1.0.8"
 github "jumpcut",     "1.0.0"
 github "flux",        "1.0.0"
+github "keyremap4macbook", "1.1.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

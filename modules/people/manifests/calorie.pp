@@ -84,6 +84,18 @@ class people::calorie {
     version => $ruby_version_link
   }
 
+  # rbenv-binstubs
+  ruby::plugin { 'rbenv-binstubs':
+    ensure => '1.3',
+    source => 'ianheggie/rbenv-binstubs'
+  }
+
+  # rbenv-ctags
+  ruby::plugin { 'rbenv-ctags':
+    ensure => 'master',
+    source => 'tpope/rbenv-ctags'
+  }
+
   class { 'nodejs::global': version => 'v0.10.21' }
 
   Git::Config::Global <| title == "core.excludesfile" |> {
@@ -123,11 +135,5 @@ class people::calorie {
     cwd => $dotfiles,
     creates => "${home}/.vimrc",
     require => Repository[$dotfiles]
-  }
-
-  # rbenv-binstubs
-  ruby::plugin { 'rbenv-binstubs':
-    ensure => '1.3',
-    source => 'ianheggie/rbenv-binstubs'
   }
 }

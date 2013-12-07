@@ -1,22 +1,14 @@
 class people::calorie {
-  include chrome
+  include iterm2::stable
   include mysql
   include imagemagick
   include libtool
-  include alfred
-  include skype
   include zsh
-  include iterm2::stable
   include python
   include pkgconfig
-  include appcleaner
-  include hipchat
-  include dropbox
   include java
-  include evernote
-  include jumpcut
-  include flux
-  include keyremap4macbook
+
+  include people::calorie::application
 
   package {
     [

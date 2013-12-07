@@ -1,0 +1,29 @@
+class people::calorie::login_items {
+  osx_login_item { 'Dropbox':
+    name => 'Dropbox',
+    path => '/Applications/Dropbox.app',
+    hidden => true,
+    require => Package['Dropbox'],
+  }
+
+  osx_login_item { 'Alfred 2':
+    name => 'Alfred 2',
+    path => '/Applications/Alfred 2.app',
+    hidden => true,
+    require => Class['alfred'],
+  }
+
+  osx_login_item { 'Jumpcut':
+    name => 'Jumpcut',
+    path => '/Applications/Jumpcut.app',
+    hidden => true,
+    require => Class['jumpcut'],
+  }
+
+  osx_login_item { 'Flux':
+    name => 'Flux',
+    path => '/Applications/Flux.app',
+    hidden => true,
+    require => Class['flux'],
+  }
+}

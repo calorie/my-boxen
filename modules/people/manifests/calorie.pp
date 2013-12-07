@@ -36,25 +36,11 @@ class people::calorie {
   $home     = "/Users/${::luser}"
   $dotfiles = "${home}/dotfiles"
   $work     = "${home}/work"
-  $ruby_env = {
-    'RUBY_CONFIGURE_OPTS' => "--with-openssl-dir=${boxen::config::homebrewdir}/opt/openssl --enable-shared --with-readline-dir=${boxen::config::homebrewdir}/opt/readline"
-  }
-  $ruby_version = '2.0.0-p353'
-  $ruby_version_link = '2.0.0'
-
-  # install ruby
-  ruby::version { $ruby_version:
-    env => $ruby_env
-  }
-  file { "${boxen::config::home}/rbenv/versions/${ruby_version_link}":
-    ensure  => symlink,
-    force   => true,
-    target  => "${boxen::config::home}/rbenv/versions/${ruby_version}"
-  }
+  $ruby_configure_opts = "--with-openssl-dir=${boxen::config::homebrewdir}/opt/openssl --enable-shared --with-readline-dir=${boxen::config::homebrewdir}/opt/readline"
+  $ruby_version_link   = '2.0.0'
 
   # rbenv global
-  exec { "rbenv global ${ruby_version} && rbenv rehash": }
-  # class { 'ruby::global': version => $ruby_version_link }
+  class { 'ruby::global': version => $ruby_version_link }
 
   # default gems
   define default_gems ($gem = $title, $version) {
@@ -128,4 +114,7 @@ class people::calorie {
     creates => "${home}/.vimrc",
     require => Repository[$dotfiles]
   }
+
+  # ruby configure options
+  exec { "launchctl setenv RUBY_CONFIGURE_OPTS '${ruby_configure_opts}'": }
 }

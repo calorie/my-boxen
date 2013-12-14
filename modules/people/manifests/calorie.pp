@@ -9,6 +9,7 @@ class people::calorie {
   include java
 
   include people::calorie::application
+  include people::calorie::ruby
 
   package {
     [
@@ -36,43 +37,7 @@ class people::calorie {
   $home     = "/Users/${::luser}"
   $dotfiles = "${home}/dotfiles"
   $work     = "${home}/work"
-  $ruby_configure_opts = "--with-openssl-dir=${boxen::config::homebrewdir}/opt/openssl --enable-shared --with-readline-dir=${boxen::config::homebrewdir}/opt/readline"
-  $ruby_version_link   = '2.0.0'
-
-  # rbenv global
-  class { 'ruby::global': version => $ruby_version_link }
-
-  # default gems
-  define default_gems ($gem = $title, $version) {
-    ruby::gem { "${gem} for ${version}":
-      gem  => $gem,
-      ruby => $version,
-    }
-  }
-  default_gems {
-    [
-      'bundler',
-      'rake',
-      'rubygems-update',
-      'rbenv-rehash',
-      'pry',
-      'tmuxinator',
-      'vvm-rb',
-    ]:
-    version => $ruby_version_link
-  }
-
-  # rbenv-binstubs
-  ruby::plugin { 'rbenv-binstubs':
-    ensure => '1.3',
-    source => 'ianheggie/rbenv-binstubs'
-  }
-
-  # rbenv-ctags
-  ruby::plugin { 'rbenv-ctags':
-    ensure => 'master',
-    source => 'tpope/rbenv-ctags'
-  }
+  $calorie  = "${boxen::config::repodir}/modules/people/manifests/calorie"
 
   class { 'nodejs::global': version => 'v0.10.21' }
 
@@ -115,6 +80,10 @@ class people::calorie {
     require => Repository[$dotfiles]
   }
 
-  # ruby configure options
-  exec { "launchctl setenv RUBY_CONFIGURE_OPTS '${ruby_configure_opts}'": }
+  # osx settings
+  exec { "osx-settings":
+    cwd => $calorie,
+    creates => "${home}/.vimrc",
+    command => "sh ${calorie}/osx -s"
+  }
 }

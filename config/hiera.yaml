@@ -1,0 +1,8 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: '/Users/yuu/src/our-boxen/config/hieradata'
+:logger: console
+:hierarchy:
+  - common

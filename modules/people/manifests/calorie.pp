@@ -8,6 +8,7 @@ class people::calorie {
   include pkgconfig
   include java
 
+  include people::calorie::osx_settings
   include people::calorie::application
   # include people::calorie::ruby
   class { 'ruby::global': version => '2.0.0' }
@@ -79,12 +80,5 @@ class people::calorie {
     cwd => $dotfiles,
     creates => "${home}/.vimrc",
     require => Repository[$dotfiles]
-  }
-
-  # osx settings
-  exec { "osx-settings":
-    cwd => $calorie,
-    creates => "${home}/.vimrc",
-    command => "sh ${calorie}/osx -s"
   }
 }

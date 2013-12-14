@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/calorie/puppet-ruby.git
+  ref: add_ruby_env
+  sha: 9943d1be3901138ee3d4c32cecce17309f9ae3c8
+  specs:
+    ruby (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
@@ -199,11 +206,6 @@ GITHUBTARBALL
     repository (2.2.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-ruby
-  specs:
-    ruby (6.7.6)
-
-GITHUBTARBALL
   remote: boxen/puppet-skype
   specs:
     skype (1.0.7)
@@ -295,7 +297,7 @@ DEPENDENCIES
   python (= 1.3.0)
   redis (= 2.1.0)
   repository (= 2.2.0)
-  ruby (= 6.7.6)
+  ruby (>= 0)
   skype (= 1.0.7)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)

@@ -9,7 +9,8 @@ class people::calorie {
   include java
 
   include people::calorie::application
-  include people::calorie::ruby
+  # include people::calorie::ruby
+  class { 'ruby::global': version => '2.0.0' }
 
   package {
     [

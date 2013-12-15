@@ -44,4 +44,10 @@ class people::calorie::ruby {
     mode    => '0644',
     content => "${global_version}\n",
   }
+
+  exec { "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=${global_version} vvm-rb install --use latest --enable-multibyte --with-features=huge --enable-fontset --disable-selinux --enable-pythoninterp --enable-rubyinterp --enable-xim --enable-luainterp --with-luajit --with-lua-prefix=/opt/boxen/homebrew'":
+    provider => 'shell',
+    creates => "/Users/${::luser}/.vvm-rb",
+    require => [ Ruby::Gem["vvm-rb for ${global_version}"], Package['zsh'] ]
+  }
 }

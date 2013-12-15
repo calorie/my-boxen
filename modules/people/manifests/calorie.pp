@@ -27,13 +27,6 @@ class people::calorie {
       'tig',
     ]:
   }
-  package { 'macvim':
-    ensure => installed,
-    install_options => [
-      '--with-cscope',
-      '--with-lua',
-    ];
-  }
 
   $home     = "/Users/${::luser}"
   $dotfiles = "${home}/dotfiles"
@@ -42,12 +35,12 @@ class people::calorie {
 
   class { 'nodejs::global': version => 'v0.10.21' }
 
-  Git::Config::Global <| title == "core.excludesfile" |> {
-    value => "~/.gitignore"
+  Git::Config::Global <| title == 'core.excludesfile' |> {
+    value => '~/.gitignore'
   }
 
-  file { "${work}":
-    ensure => "directory",
+  file { $work:
+    ensure => 'directory',
   }
 
   # coffeescript
@@ -60,20 +53,20 @@ class people::calorie {
   repository { $vichrome:
     source  => "calorie/ViChrome"
   }
-  exec { "make":
+  exec { 'make':
     cwd => $vichrome,
     creates => "${vichrome}/vichrome.js",
     require => Repository[$vichrome]
   }
 
   # hg
-  exec { "pip install mercurial":
+  exec { 'pip install mercurial':
     creates => "${boxen::config::homebrewdir}/share/python/hg"
   }
 
   # dotfiles
   repository { $dotfiles:
-    source  => "calorie/dotfiles"
+    source  => 'calorie/dotfiles'
   }
   exec { "echo y|${dotfiles}/setup.sh":
     cwd => $dotfiles,

@@ -19,6 +19,15 @@ class people::calorie::application {
     provider => pkgdmg;
   }
 
+  # macvim
+  package { 'macvim':
+    ensure => installed,
+    install_options => [
+      '--with-cscope',
+      '--with-lua',
+    ];
+  }
+
   # keyremap4macbook
   keyremap4macbook::private_xml{ 'private.xml':
     source => "${boxen::config::repodir}/modules/people/manifests/calorie/private.xml"

@@ -10,8 +10,7 @@ class people::calorie {
 
   include people::calorie::osx_settings
   include people::calorie::application
-  # include people::calorie::ruby
-  class { 'ruby::global': version => '2.0.0' }
+  include people::calorie::ruby
 
   package {
     [

@@ -1,5 +1,5 @@
 class people::calorie::ruby {
-  $ruby_configure_opts = "--with-openssl-dir=${boxen::config::homebrewdir}/opt/openssl --enable-shared --with-readline-dir=${boxen::config::homebrewdir}/opt/readline"
+  $ruby_configure_opts = "--enable-shared --with-openssl-dir=${boxen::config::homebrewdir}/opt/openssl --with-readline-dir=${boxen::config::homebrewdir}/opt/readline"
   $ruby_env = {
     'CONFIGURE_OPTS'      => $ruby_configure_opts,
     'RUBY_CONFIGURE_OPTS' => $ruby_configure_opts
@@ -8,9 +8,9 @@ class people::calorie::ruby {
   $global_version = '2.0.0-p353'
 
   # install ruby
-  define install_rubies ($version = $title, $env) {
+  define install_rubies ($version = $title) {
     ruby::version { $version:
-      env => $env
+      env => $ruby_env
     }
     ruby::gem { "rake for ${version}":
       gem  => 'rake',
@@ -33,9 +33,7 @@ class people::calorie::ruby {
       ruby => $version,
     }
   }
-  install_rubies { $rubies:
-    env => $ruby_env
-  }
+  install_rubies { $rubies: }
 
   # rbenv global
   file { "${boxen::config::home}/rbenv/version":
@@ -45,9 +43,16 @@ class people::calorie::ruby {
     content => "${global_version}\n",
   }
 
-  exec { "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=${global_version} vvm-rb install --use latest --enable-multibyte --with-features=huge --enable-fontset --disable-selinux --enable-pythoninterp --enable-rubyinterp --enable-xim --enable-luainterp --with-luajit --with-lua-prefix=/opt/boxen/homebrew'":
+  exec { "vvm-rb for system":
+    command => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system gem install vvm-rb'",
+    creates => "/Users/${::luser}/.vvm-rb",
+    provider => 'shell',
+    user => 'root',
+    require => [ Package['zsh'] ]
+  }
+  exec { "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system vvm-rb install --use latest --enable-multibyte --with-features=huge --enable-fontset --disable-selinux --enable-pythoninterp --enable-rubyinterp --enable-xim --enable-luainterp --with-luajit --with-lua-prefix=/opt/boxen/homebrew'":
     provider => 'shell',
     creates => "/Users/${::luser}/.vvm-rb",
-    require => [ Ruby::Gem["vvm-rb for ${global_version}"], Package['zsh'] ]
+    require => [ Exec['vvm-rb for system'], Package['zsh'] ]
   }
 }

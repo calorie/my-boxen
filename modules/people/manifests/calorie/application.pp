@@ -13,6 +13,12 @@ class people::calorie::application {
 
   include people::calorie::login_items
 
+  # google japanese input
+  package { 'GoogleJapaneseInput':
+    source   => 'http://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg',
+    provider => pkgdmg;
+  }
+
   # keyremap4macbook
   keyremap4macbook::private_xml{ 'private.xml':
     source => "${boxen::config::repodir}/modules/people/manifests/calorie/private.xml"

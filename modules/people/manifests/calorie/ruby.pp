@@ -43,16 +43,17 @@ class people::calorie::ruby {
     content => "${global_version}\n",
   }
 
-  exec { "vvm-rb for system":
-    command => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system gem install vvm-rb'",
-    creates => "/Users/${::luser}/.vvm-rb",
+  exec { 'vvm-rb for system':
+    command  => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system gem install vvm-rb'",
+    creates  => "/Users/${::luser}/.vvm-rb",
     provider => 'shell',
-    user => 'root',
-    require => [ Package['zsh'] ]
+    user     => 'root',
+    require  => [ Package['zsh'] ]
   }
-  exec { "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system vvm-rb install --use latest --enable-multibyte --with-features=huge --enable-fontset --disable-selinux --enable-pythoninterp --enable-rubyinterp --enable-xim --enable-luainterp --with-luajit --with-lua-prefix=/opt/boxen/homebrew'":
+  exec { 'install latest vim':
+    command  => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system vvm-rb install --use latest --enable-multibyte --with-features=huge --enable-fontset --disable-selinux --enable-pythoninterp --enable-rubyinterp --enable-xim --enable-luainterp --with-lua-prefix=${boxen::config::homebrewdir}'",
+    creates  => "/Users/${::luser}/.vvm-rb",
     provider => 'shell',
-    creates => "/Users/${::luser}/.vvm-rb",
-    require => [ Exec['vvm-rb for system'], Package['zsh'] ]
+    require  => [ Exec['vvm-rb for system'], Package['zsh'] ]
   }
 }

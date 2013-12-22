@@ -1,25 +1,45 @@
 <?xml version="1.0"?>
 <root>
-  <appdef>
-    <appname>iTERM2</appname>
-    <equal>com.googlecode.iterm2</equal>
-  </appdef>
-  <appdef>
-    <appname>MACVIM</appname>
-    <equal>org.vim.MacVim</equal>
-  </appdef>
   <list>
     <item>
+      <name>ESC to IME off (to English) + Esc + Esc</name>
+      <appendix>Enable for all but HHK</appendix>
+      <identifier>private.vim.ime_off_ESC</identifier>
+      <only>TERMINAL, VI</only>
+      <inputsource_only>JAPANESE</inputsource_only>
+      <autogen>
+        __KeyToKey__ KeyCode::ESCAPE, ModifierFlag::NONE,
+        KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
+        KeyCode::VK_CHANGE_INPUTSOURCE_JAPANESE,
+        KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
+        KeyCode::ESCAPE, KeyCode::ESCAPE
+      </autogen>
+    </item>
+    <item>
       <name>Control + BRACKET_LEFT to IME off (to English) + Esc + Esc</name>
-      <identifier>private.vim.ime_new</identifier>
+      <identifier>private.vim.ime_off_ctrl_bracketleft</identifier>
       <only>TERMINAL, VI</only>
       <inputsource_only>JAPANESE</inputsource_only>
       <autogen>
         __KeyToKey__ KeyCode::BRACKET_LEFT,
         MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
-        KeyCode::JIS_EISUU,
+        KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
         KeyCode::VK_CHANGE_INPUTSOURCE_JAPANESE,
-        KeyCode::JIS_EISUU,
+        KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
+        KeyCode::ESCAPE, KeyCode::ESCAPE
+      </autogen>
+    </item>
+    <item>
+      <name>Control + C to IME off (to English) + Esc + Esc</name>
+      <identifier>private.vim.ime_off_ctrl_c</identifier>
+      <only>TERMINAL, VI</only>
+      <inputsource_only>JAPANESE</inputsource_only>
+      <autogen>
+        __KeyToKey__ KeyCode::C,
+        MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL|ModifierFlag::NONE,
+        KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
+        KeyCode::VK_CHANGE_INPUTSOURCE_JAPANESE,
+        KeyCode::VK_CHANGE_INPUTSOURCE_ENGLISH,
         KeyCode::ESCAPE, KeyCode::ESCAPE
       </autogen>
     </item>

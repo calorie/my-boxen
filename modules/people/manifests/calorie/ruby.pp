@@ -50,6 +50,13 @@ class people::calorie::ruby {
     user     => 'root',
     require  => [ Package['zsh'] ]
   }
+  exec { 'update vvm-rb':
+    command  => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system gem update vvm-rb && RBENV_VERSION=system gem cleanup'",
+    onlyif   => "test -d /Users/${::luser}/.vvm-rb",
+    provider => 'shell',
+    user     => 'root',
+    require  => [ Package['zsh'] ]
+  }
   exec { 'install latest vim':
     command  => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system vvm-rb install --use latest --enable-multibyte --with-features=huge --enable-fontset --disable-selinux --enable-pythoninterp --enable-rubyinterp --enable-xim --enable-luainterp --with-lua-prefix=${boxen::config::homebrewdir}'",
     creates  => "/Users/${::luser}/.vvm-rb",

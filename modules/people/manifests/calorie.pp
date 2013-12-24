@@ -51,10 +51,10 @@ class people::calorie {
   # vichrome
   $vichrome = "${work}/vichrome"
   repository { $vichrome:
-    source  => "calorie/ViChrome"
+    source  => 'calorie/ViChrome'
   }
   exec { 'make':
-    cwd => $vichrome,
+    cwd     => $vichrome,
     creates => "${vichrome}/vichrome.js",
     require => Repository[$vichrome]
   }
@@ -69,7 +69,7 @@ class people::calorie {
     source  => 'calorie/dotfiles'
   }
   exec { "echo y|${dotfiles}/setup.sh":
-    cwd => $dotfiles,
+    cwd     => $dotfiles,
     creates => "${home}/.vimrc",
     require => Repository[$dotfiles]
   }

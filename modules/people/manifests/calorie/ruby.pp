@@ -43,16 +43,10 @@ class people::calorie::ruby {
     content => "${global_version}\n",
   }
 
+  # vvm-rb
   exec { 'vvm-rb for system':
     command  => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system gem install vvm-rb'",
     creates  => "/Users/${::luser}/.vvm-rb",
-    provider => 'shell',
-    user     => 'root',
-    require  => [ Package['zsh'] ]
-  }
-  exec { 'update vvm-rb':
-    command  => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system gem update vvm-rb && RBENV_VERSION=system gem cleanup'",
-    onlyif   => "test -d /Users/${::luser}/.vvm-rb",
     provider => 'shell',
     user     => 'root',
     require  => [ Package['zsh'] ]
@@ -63,4 +57,11 @@ class people::calorie::ruby {
     provider => 'shell',
     require  => [ Exec['vvm-rb for system'], Package['zsh'] ]
   }
+  # exec { 'update vvm-rb':
+  #   command  => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=system gem update vvm-rb && RBENV_VERSION=system gem cleanup'",
+  #   onlyif   => "test -d /Users/${::luser}/.vvm-rb",
+  #   provider => 'shell',
+  #   user     => 'root',
+  #   require  => [ Package['zsh'] ]
+  # }
 }

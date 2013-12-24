@@ -12,6 +12,8 @@ class people::calorie {
   include people::calorie::application
   include people::calorie::ruby
 
+  # include projects::hpcss
+
   package {
     [
       'wget',

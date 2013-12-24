@@ -3,6 +3,7 @@ class projects::hpcss {
     ensure => installed,
     install_options => [
       '--enable-shared',
+      '--disable-fortran',
     ];
   }
 

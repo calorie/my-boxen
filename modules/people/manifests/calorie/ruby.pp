@@ -1,14 +1,14 @@
 class people::calorie::ruby {
-  $ruby_configure_opts = "--enable-shared --with-openssl-dir=${boxen::config::homebrewdir}/opt/openssl --with-readline-dir=${boxen::config::homebrewdir}/opt/readline"
-  $ruby_env = {
-    'CONFIGURE_OPTS'      => $ruby_configure_opts,
-    'RUBY_CONFIGURE_OPTS' => $ruby_configure_opts
-  }
   $rubies = ['1.9.3-p484', '2.0.0-p353']
   $global_version = '2.0.0-p353'
 
   # install ruby
   define install_rubies ($version = $title) {
+    $ruby_configure_opts = "--enable-shared --with-openssl-dir=${boxen::config::homebrewdir}/opt/openssl --with-readline-dir=${boxen::config::homebrewdir}/opt/readline"
+    $ruby_env = {
+      'RUBY_CONFIGURE_OPTS' => $ruby_configure_opts,
+      'CONFIGURE_OPTS'      => $ruby_configure_opts,
+    }
     ruby::version { $version:
       env => $ruby_env
     }

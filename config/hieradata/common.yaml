@@ -16,6 +16,9 @@ ruby::default_gems:
   - tmuxinator
   - vvm-rb
 ruby::rbenv_plugins:
+  ruby-build:
+    ensure: master
+    source: sstephenson/ruby-build
   rbenv-default-gems:
     ensure: master
     source: sstephenson/rbenv-default-gems

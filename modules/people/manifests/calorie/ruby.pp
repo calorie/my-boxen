@@ -1,4 +1,8 @@
 class people::calorie::ruby {
+  require openssl
+
+  package { ['readline']: }
+
   $rubies = ['1.9.3-p484', '2.0.0-p353']
   $global_version = '2.0.0-p353'
 

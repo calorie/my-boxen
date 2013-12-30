@@ -1,7 +1,12 @@
 ---
-ruby::ruby_env:
-  CONFIGURE_OPTS: "--with-openssl-dir=/opt/boxen/homebrew/opt/openssl --enable-shared --with-readline-dir=/opt/boxen/homebrew/opt/readline"
-  RUBY_CONFIGURE_OPTS: "--with-openssl-dir=/opt/boxen/homebrew/opt/openssl --enable-shared --with-readline-dir=/opt/boxen/homebrew/opt/readline"
+ruby::rbenv_version: master
+ruby::version::env:
+  1.9.3:
+    CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
+  2.0.0:
+    RUBY_CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
+  2.1.0:
+    RUBY_CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
 ruby::default_gems:
   - bundler
   - rake

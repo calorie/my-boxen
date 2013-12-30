@@ -48,7 +48,7 @@ github "openssl",    "1.0.0"
 github "phantomjs",  "2.0.2"
 github "pkgconfig",  "1.0.0"
 github "repository", "2.2.0"
-github "ruby",       "6.7.6"
+github "ruby",       "7.0.0"
 github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",       "1.0.0"
 github "xquartz",    "1.1.0"
@@ -87,9 +87,7 @@ github "jumpcut",     "1.0.0"
 github "flux",        "1.0.0"
 github "keyremap4macbook", "1.2.1"
 # ---/auto update---
-# mod "ruby",
-#   :git => "https://github.com/calorie/puppet-ruby.git",
-#   :ref => 'add_ruby_env'
+mod "module-data", "0.0.1", :github_tarball => "ripienaar/puppet-module-data"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

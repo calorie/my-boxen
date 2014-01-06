@@ -10,6 +10,7 @@ class people::calorie::application {
   include flux
   include keyremap4macbook
   include keyremap4macbook::login_item
+  include teamviewer
 
   include people::calorie::login_items
 

@@ -1,5 +1,6 @@
 class people::calorie::application {
   include chrome
+  include firefox
   include alfred
   include skype
   include appcleaner

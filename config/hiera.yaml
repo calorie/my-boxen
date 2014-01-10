@@ -2,7 +2,7 @@
 :backends:
   - yaml
 :yaml:
-  :datadir: '/Users/yuu/src/our-boxen/config/hieradata'
+  :datadir: "/Users/%{::luser}/src/our-boxen/config/hieradata"
 :logger: console
 :hierarchy:
   - common

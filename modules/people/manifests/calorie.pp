@@ -1,12 +1,14 @@
 class people::calorie {
   include iterm2::stable
   include mysql
+  include postgresql
   include imagemagick
   include libtool
   include zsh
   include python
   include pkgconfig
   include java
+  include heroku
 
   include people::calorie::osx_settings
   include people::calorie::application

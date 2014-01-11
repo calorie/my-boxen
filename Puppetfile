@@ -55,8 +55,10 @@ github "xquartz",    "1.1.0"
 
 github "java",             "1.1.0"
 # ---auto update---
+github "sysctl",           "1.0.0"
 github "dropbox",          "1.2.0"
 github "mysql",            "1.2.0"
+github "postgresql",       "3.0.0"
 github "iterm2",           "1.0.5"
 github "chrome",           "1.1.2"
 github "firefox",          "1.1.7"
@@ -87,6 +89,7 @@ github "hipchat",          "1.1.0"
 github "jumpcut",          "1.0.0"
 github "flux",             "1.0.0"
 github "keyremap4macbook", "1.2.1"
+github "heroku",           "2.0.0"
 github "teamviewer",       "1.0.2", :repo => "singuerinc/puppet-teamviewer"
 # ---/auto update---
 mod "module-data", "0.0.1", :github_tarball => "ripienaar/puppet-module-data"

@@ -89,6 +89,11 @@ GITHUBTARBALL
     go (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-heroku
+  specs:
+    heroku (2.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-hipchat
   specs:
     hipchat (1.1.0)
@@ -189,6 +194,11 @@ GITHUBTARBALL
     pkgconfig (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-postgresql
+  specs:
+    postgresql (3.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-python
   specs:
     python (1.3.0)
@@ -217,6 +227,11 @@ GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-sysctl
+  specs:
+    sysctl (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-tmux
@@ -287,6 +302,7 @@ DEPENDENCIES
   gdb (= 1.0.0)
   git (= 1.2.5)
   go (= 1.0.0)
+  heroku (= 2.0.0)
   hipchat (= 1.1.0)
   homebrew (= 1.5.1)
   hub (= 1.0.3)
@@ -309,6 +325,7 @@ DEPENDENCIES
   phantomjs (= 2.0.2)
   php (= 1.1.4)
   pkgconfig (= 1.0.0)
+  postgresql (= 3.0.0)
   python (= 1.3.0)
   redis (= 2.1.0)
   repository (= 2.2.0)
@@ -316,6 +333,7 @@ DEPENDENCIES
   skype (= 1.0.7)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
+  sysctl (= 1.0.0)
   teamviewer (= 1.0.2)
   tmux (= 1.0.2)
   vim (= 1.0.5)

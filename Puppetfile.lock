@@ -41,7 +41,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
-    dnsmasq (1.0.0)
+    dnsmasq (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-dropbox
@@ -297,6 +297,7 @@ DEPENDENCIES
   evernote (= 2.0.4)
   firefox (= 1.1.7)
   flux (= 1.0.0)
+  dnsmasq (= 1.0.1)
   foreman (= 1.0.0)
   gcc (= 2.0.1)
   gdb (= 1.0.0)

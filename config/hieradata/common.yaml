@@ -15,6 +15,7 @@ ruby::default_gems:
   - pry
   - tmuxinator
   - vvm-rb
+  - refe2
 ruby::rbenv_plugins:
   ruby-build:
     ensure: master

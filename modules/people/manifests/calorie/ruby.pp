@@ -36,6 +36,10 @@ class people::calorie::ruby {
       gem  => 'vvm-rb',
       ruby => $version,
     }
+    ruby::gem { "refe2 for ${version}":
+      gem  => 'refe2',
+      ruby => $version,
+    }
   }
   install_rubies { $rubies: }
 
@@ -45,5 +49,12 @@ class people::calorie::ruby {
     owner   => $::luser,
     mode    => '0644',
     content => "${global_version}\n",
+  }
+
+  exec { 'init refe2 database':
+    command  => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=${global_version} bitclust setup --versions=1.9.3,2.0.0,2.1.0'",
+    creates  => "/Users/${::luser}/.bitclust",
+    provider => 'shell',
+    require  => [ Ruby::Gem["refe2 for ${global_version}"], Package['zsh'] ]
   }
 }

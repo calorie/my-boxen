@@ -29,6 +29,7 @@ class people::calorie {
       'the_silver_searcher',
       'rmtrash',
       'tig',
+      'nkf',
     ]:
   }
 

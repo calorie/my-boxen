@@ -12,6 +12,8 @@ class people::calorie::application {
   include keyremap4macbook
   include keyremap4macbook::login_item
   include teamviewer
+  include virtualbox
+  include vagrant
 
   include people::calorie::login_items
 

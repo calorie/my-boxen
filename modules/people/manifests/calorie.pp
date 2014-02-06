@@ -10,71 +10,18 @@ class people::calorie {
   include java
   include heroku
 
+  include people::calorie::pkg
   include people::calorie::osx_settings
   include people::calorie::application
   include people::calorie::ruby
+  include people::calorie::nodejs
+  include people::calorie::vichrome
+  include people::calorie::dotfiles
 
   # include projects::hpcss
 
-  package {
-    [
-      'wget',
-      'tmux',
-      'fontforge',
-      'ctags',
-      'cmake',
-      'lua',
-      'luajit',
-      'reattach-to-user-namespace',
-      'the_silver_searcher',
-      'rmtrash',
-      'tig',
-      'nkf',
-    ]:
-  }
-
-  $home     = "/Users/${::luser}"
-  $dotfiles = "${home}/dotfiles"
-  $work     = "${home}/work"
-  $calorie  = "${boxen::config::repodir}/modules/people/manifests/calorie"
-  $nodejs_global = 'v0.10.21'
-
-  class { 'nodejs::global': version => $nodejs_global }
-
-  Git::Config::Global <| title == 'core.excludesfile' |> {
-    value => '~/.gitignore'
-  }
+  $home = "/Users/${::luser}"
+  $work = "${home}/work"
 
   file { $work: ensure => 'directory' }
-
-  # coffeescript
-  nodejs::module { 'coffee-script':
-    node_version => $nodejs_global
-  }
-
-  # vichrome
-  $vichrome = "${boxen::config::srcdir}/vichrome"
-  repository { $vichrome:
-    source  => 'calorie/ViChrome'
-  }
-  exec { 'make':
-    cwd     => $vichrome,
-    creates => "${vichrome}/vichrome.js",
-    require => Repository[$vichrome]
-  }
-
-  # hg
-  exec { 'pip install mercurial':
-    creates => "${boxen::config::homebrewdir}/share/python/hg"
-  }
-
-  # dotfiles
-  repository { $dotfiles:
-    source  => 'calorie/dotfiles'
-  }
-  exec { "echo y|${dotfiles}/setup.sh":
-    cwd     => $dotfiles,
-    creates => "${home}/.vimrc",
-    require => Repository[$dotfiles]
-  }
 }

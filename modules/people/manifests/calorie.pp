@@ -37,24 +37,23 @@ class people::calorie {
   $dotfiles = "${home}/dotfiles"
   $work     = "${home}/work"
   $calorie  = "${boxen::config::repodir}/modules/people/manifests/calorie"
+  $nodejs_global = 'v0.10.21'
 
-  class { 'nodejs::global': version => 'v0.10.21' }
+  class { 'nodejs::global': version => $nodejs_global }
 
   Git::Config::Global <| title == 'core.excludesfile' |> {
     value => '~/.gitignore'
   }
 
-  file { $work:
-    ensure => 'directory',
-  }
+  file { $work: ensure => 'directory' }
 
   # coffeescript
   nodejs::module { 'coffee-script':
-    node_version => 'v0.10.21'
+    node_version => $nodejs_global
   }
 
   # vichrome
-  $vichrome = "${work}/vichrome"
+  $vichrome = "${boxen::config::srcdir}/vichrome"
   repository { $vichrome:
     source  => 'calorie/ViChrome'
   }

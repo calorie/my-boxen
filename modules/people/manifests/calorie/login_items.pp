@@ -26,4 +26,11 @@ class people::calorie::login_items {
     hidden => true,
     require => Class['flux'],
   }
+
+  osx_login_item { 'Caffeine':
+    name => 'Caffeine',
+    path => '/Applications/Caffeine.app',
+    hidden => true,
+    require => Class['caffeine'],
+  }
 }

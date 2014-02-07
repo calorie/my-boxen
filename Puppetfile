@@ -92,6 +92,7 @@ github "flux",             "1.0.0"
 github "keyremap4macbook", "1.2.1"
 github "heroku",           "2.0.0"
 github "teamviewer",       "1.0.2", :repo => "singuerinc/puppet-teamviewer"
+github "caffeine",         "1.0.0"
 # ---/auto update---
 mod "module-data", "0.0.1", :github_tarball => "ripienaar/puppet-module-data"
 

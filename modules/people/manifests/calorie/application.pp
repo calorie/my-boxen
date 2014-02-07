@@ -14,6 +14,7 @@ class people::calorie::application {
   include teamviewer
   include virtualbox
   include vagrant
+  include caffeine
 
   include people::calorie::login_items
 

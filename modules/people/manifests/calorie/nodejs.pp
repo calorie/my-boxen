@@ -1,5 +1,5 @@
 class people::calorie::nodejs {
-  $nodejs_global = 'v0.10.21'
+  $nodejs_global = 'v0.10'
 
   class { 'nodejs::global': version => $nodejs_global }
 

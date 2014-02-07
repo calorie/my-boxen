@@ -36,4 +36,12 @@ class people::calorie::application {
   keyremap4macbook::private_xml{ 'private.xml':
     source => "${boxen::config::repodir}/modules/people/manifests/calorie/private.xml"
   }
+
+  # vagrant
+  vagrant::plugin {
+    [
+      'vagrant-omnibus',
+      'vagrant-berkshelf',
+    ]:
+  }
 }

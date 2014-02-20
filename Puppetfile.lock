@@ -154,6 +154,11 @@ GITHUBTARBALL
     macvim (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-memcached
+  specs:
+    memcached (2.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-mongodb
   specs:
     mongodb (1.2.0)
@@ -326,6 +331,7 @@ DEPENDENCIES
   keyremap4macbook (= 1.2.1)
   libtool (= 1.0.0)
   macvim (= 1.0.0)
+  memcached (= 2.0.0)
   module-data (= 0.0.1)
   mongodb (= 1.2.0)
   mysql (= 1.2.0)

@@ -9,6 +9,7 @@ class people::calorie {
   include pkgconfig
   include java
   include heroku
+  include memcached
 
   include people::calorie::pkg
   include people::calorie::osx_settings

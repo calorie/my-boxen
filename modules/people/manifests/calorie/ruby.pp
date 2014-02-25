@@ -2,8 +2,8 @@ class people::calorie::ruby {
   require openssl
   package { ['readline']: }
 
-  $rubies = ['1.9.3-p484', '2.0.0-p353', '2.1.0']
-  $global_version = '2.1.0'
+  $rubies = ['1.9.3-p545', '2.0.0-p451', '2.1.1']
+  $global_version = '2.1.1'
 
   # install ruby
   define install_rubies ($version = $title) {

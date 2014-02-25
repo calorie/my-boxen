@@ -1,5 +1,4 @@
 ---
-ruby::rbenv_version: master
 ruby::version::env:
   1.9.3:
     CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
@@ -17,15 +16,9 @@ ruby::default_gems:
   - vvm-rb
   - refe2
 ruby::rbenv_plugins:
-  ruby-build:
-    ensure: master
-    source: sstephenson/ruby-build
-  rbenv-default-gems:
-    ensure: master
-    source: sstephenson/rbenv-default-gems
   rbenv-binstubs:
-    ensure: master
+    ensure: 1.3
     source: ianheggie/rbenv-binstubs
   rbenv-ctags:
-    ensure: master
+    ensure: v1.0.1
     source: tpope/rbenv-ctags

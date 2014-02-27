@@ -37,6 +37,12 @@ class people::calorie::application {
   keyremap4macbook::private_xml{ 'private.xml':
     source => "${boxen::config::repodir}/modules/people/manifests/calorie/private.xml"
   }
+  keyremap4macbook::exec { 'set repeat.initial_wait 250':
+    unless => 'repeat.initial_wait=250'
+  }
+  keyremap4macbook::exec { 'set repeat.wait 30':
+    unless => 'repeat.wait=30'
+  }
 
   # vagrant
   vagrant::plugin {

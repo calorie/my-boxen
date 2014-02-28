@@ -15,6 +15,7 @@ class people::calorie::application {
   include virtualbox
   include vagrant
   include caffeine
+  include sizeup
 
   include people::calorie::login_items
 

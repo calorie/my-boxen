@@ -95,6 +95,7 @@ github "heroku",           "2.0.0"
 github "teamviewer",       "1.0.2", :repo => "singuerinc/puppet-teamviewer"
 github "caffeine",         "1.0.0"
 github "memcached",        "2.0.0"
+github "sizeup",           "1.0.0"
 # ---/auto update---
 
 # Optional/custom modules. There are tons available at

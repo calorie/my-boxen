@@ -33,11 +33,4 @@ class people::calorie::login_items {
     hidden => true,
     require => Class['caffeine'],
   }
-
-  osx_login_item { 'SizeUp':
-    name => 'SizeUp',
-    path => '/Applications/SizeUp.app',
-    hidden => true,
-    require => Class['sizeup'],
-  }
 }

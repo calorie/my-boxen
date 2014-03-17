@@ -49,7 +49,6 @@ class people::calorie::application {
   vagrant::plugin {
     [
       'vagrant-omnibus',
-      'vagrant-berkshelf',
     ]:
   }
 }

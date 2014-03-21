@@ -1,4 +1,4 @@
-class people::calorie::pkg {
+class people::calorie::packages {
   package {
     [
       'wget',

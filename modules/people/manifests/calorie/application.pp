@@ -4,7 +4,6 @@ class people::calorie::application {
   include alfred
   include skype
   include appcleaner
-  include hipchat
   include dropbox
   include evernote
   include jumpcut

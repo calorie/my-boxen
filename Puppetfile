@@ -96,6 +96,7 @@ github "teamviewer",         "1.0.2", :repo => "singuerinc/puppet-teamviewer"
 github "caffeine",           "1.0.0"
 github "memcached",          "2.0.0"
 github "better_touch_tools", "1.0.0"
+github "slack",              "1.0.4"
 # ---/auto update---
 
 # Optional/custom modules. There are tons available at

@@ -3,9 +3,9 @@ class people::calorie::nodejs {
 
   class { 'nodejs::global': version => $nodejs_global }
 
-  $global_modules = ['coffee-script', 'grunt-cli']
+  $global_modules = ['coffee-script']
 
-  # coffeescript
+  # global modules
   nodejs::module { $global_modules:
     node_version => $nodejs_global
   }

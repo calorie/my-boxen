@@ -33,4 +33,11 @@ class people::calorie::login_items {
     hidden => true,
     require => Class['caffeine'],
   }
+
+  osx_login_item { 'BetterTouchTool':
+    name => 'BetterTouchTool',
+    path => '/Applications/BetterTouchTool.app',
+    hidden => true,
+    require => Class['better_touch_tools'],
+  }
 }

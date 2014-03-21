@@ -11,7 +11,7 @@ class people::calorie {
   include heroku
   include memcached
 
-  include people::calorie::pkg
+  include people::calorie::packages
   include people::calorie::osx_settings
   include people::calorie::application
   include people::calorie::ruby
@@ -20,6 +20,8 @@ class people::calorie {
   include people::calorie::dotfiles
 
   # include projects::hpcss
+  # include projects::hekk
+  # include projects::precent
 
   $home = "/Users/${::luser}"
   $work = "${home}/work"

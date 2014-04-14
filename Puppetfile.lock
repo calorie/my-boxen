@@ -91,7 +91,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
-    git (2.2.2)
+    git (2.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-go
@@ -111,7 +111,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (1.6.1)
+    homebrew (1.6.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
@@ -196,7 +196,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
-    phantomjs (2.1.0)
+    phantomjs (2.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-php
@@ -231,7 +231,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (7.2.4)
+    ruby (7.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-skype
@@ -327,11 +327,11 @@ DEPENDENCIES
   foreman (= 1.2.0)
   gcc (= 2.0.100)
   gdb (= 1.0.0)
-  git (= 2.2.2)
+  git (= 2.3.0)
   go (= 1.1.0)
   heroku (= 2.0.0)
   hipchat (= 1.1.0)
-  homebrew (= 1.6.1)
+  homebrew (= 1.6.2)
   hub (= 1.3.0)
   icu4c (= 1.0.1)
   imagemagick (= 1.2.1)
@@ -350,14 +350,14 @@ DEPENDENCIES
   nodejs (= 3.7.0)
   openssl (= 1.0.0)
   osx (= 2.2.0)
-  phantomjs (= 2.1.0)
+  phantomjs (= 2.3.0)
   php (= 1.1.4)
   pkgconfig (= 1.0.0)
   postgresql (= 3.0.0)
   python (= 1.3.0)
   redis (= 2.1.0)
   repository (= 2.3.0)
-  ruby (= 7.2.4)
+  ruby (= 7.3.0)
   skype (= 1.0.7)
   slack (= 1.0.4)
   stdlib (= 4.1.0)

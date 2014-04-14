@@ -1,16 +1,19 @@
 ---
+ruby_opts: &ruby_opts
+  LDFLAGS: "-L/opt/X11/lib"
+  CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
+  RUBY_CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
 ruby::version::env:
-  1.9.3:
-    CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
-  2.0.0:
-    RUBY_CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
-  2.1.0:
-    RUBY_CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
+  1.9.3-p545:
+    <<: *ruby_opts
+  2.0.0-p451:
+    <<: *ruby_opts
+  2.1.1:
+    <<: *ruby_opts
+ruby::global_version: "2.1.1"
 ruby::default_gems:
   - bundler
-  - rake
   - rubygems-update
-  - rbenv-rehash
   - pry
   - tmuxinator
   - vvm-rb

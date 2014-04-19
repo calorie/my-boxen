@@ -18,6 +18,7 @@ ruby::default_gems:
   - tmuxinator
   - vvm-rb
   - refe2
+  - rubocop
 ruby::rbenv_plugins:
   rbenv-binstubs:
     ensure: 1.3

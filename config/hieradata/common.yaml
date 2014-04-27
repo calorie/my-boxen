@@ -1,7 +1,6 @@
 ---
 ruby_opts: &ruby_opts
   LDFLAGS: "-L/opt/X11/lib"
-  CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
   RUBY_CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
 ruby::version::env:
   1.9.3-p545:

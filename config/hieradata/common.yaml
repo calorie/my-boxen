@@ -5,11 +5,11 @@ ruby_opts: &ruby_opts
 ruby::version::env:
   1.9.3-p545:
     <<: *ruby_opts
-  2.0.0-p451:
+  2.0.0-p481:
     <<: *ruby_opts
-  2.1.1:
+  2.1.2:
     <<: *ruby_opts
-ruby::global_version: "2.1.1"
+ruby::global_version: "2.1.2"
 ruby::default_gems:
   - bundler
   - rubygems-update
@@ -18,6 +18,7 @@ ruby::default_gems:
   - vvm-rb
   - refe2
   - rubocop
+ruby::build::ensure: 'v20140509.1'
 ruby::rbenv_plugins:
   rbenv-binstubs:
     ensure: 1.3

@@ -18,6 +18,7 @@ class people::calorie {
   include people::calorie::nodejs
   include people::calorie::vichrome
   include people::calorie::dotfiles
+  include people::calorie::go
 
   # include projects::hpcss
   # include projects::hekk

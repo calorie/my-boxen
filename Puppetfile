@@ -100,6 +100,7 @@ github "caffeine",           "1.0.0"
 github "memcached",          "2.0.0"
 github "better_touch_tools", "1.0.0"
 github "slack",              "1.0.4"
+github "vlc",                "1.1.0"
 # ---/auto update---
 
 # Optional/custom modules. There are tons available at

@@ -15,6 +15,7 @@ class people::calorie::application {
   include vagrant
   include caffeine
   include better_touch_tools
+  include vlc
 
   include people::calorie::login_items
 

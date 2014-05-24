@@ -13,6 +13,7 @@ class people::calorie::packages {
       'rmtrash',
       'tig',
       'nkf',
+      'ssh-copy-id',
     ]:
   }
 

@@ -1,4 +1,12 @@
+include homebrew
+
 class people::calorie::packages {
+  homebrew::tap {
+    [
+      'peco/peco',
+    ]:
+  }
+
   package {
     [
       'wget',
@@ -14,6 +22,7 @@ class people::calorie::packages {
       'tig',
       'nkf',
       'ssh-copy-id',
+      'peco',
     ]:
   }
 

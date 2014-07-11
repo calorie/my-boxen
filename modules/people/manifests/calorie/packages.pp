@@ -23,6 +23,7 @@ class people::calorie::packages {
       'nkf',
       'ssh-copy-id',
       'peco',
+      'direnv',
     ]:
   }
 

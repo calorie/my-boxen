@@ -8,8 +8,8 @@ class people::calorie::application {
   include evernote
   include jumpcut
   include flux
-  include keyremap4macbook
-  include keyremap4macbook::login_item
+  include karabiner
+  include karabiner::login_item
   include teamviewer
   include virtualbox
   include vagrant
@@ -35,13 +35,13 @@ class people::calorie::application {
   }
 
   # keyremap4macbook
-  keyremap4macbook::private_xml{ 'private.xml':
+  karabiner::private_xml{ 'private.xml':
     source => "${boxen::config::repodir}/modules/people/manifests/calorie/private.xml"
   }
-  keyremap4macbook::exec { 'set repeat.initial_wait 250':
+  karabiner::exec { 'set repeat.initial_wait 250':
     unless => 'repeat.initial_wait=250'
   }
-  keyremap4macbook::exec { 'set repeat.wait 30':
+  karabiner::exec { 'set repeat.wait 30':
     unless => 'repeat.wait=30'
   }
 

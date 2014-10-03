@@ -1,13 +1,6 @@
 class people::calorie::osx_settings {
   # include osx::finder::show_hidden_files
-
-  boxen::osx_defaults { 'Activating Dock auto-hide':
-    user   => $::luser,
-    domain => 'com.apple.dock',
-    key    => 'autohide',
-    type   => 'int',
-    value  => 1,
-  }
+  include osx::dock::autohide
 
   boxen::osx_defaults { 'Disable natural (touchscreen-style) scrolling':
     user   => $::luser,

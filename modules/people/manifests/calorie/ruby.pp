@@ -33,8 +33,8 @@ class people::calorie::ruby {
       'libiconv',
     ]:
   }
-  exec { 'brew link libxml2 libxslt':
-    command     => 'brew link libxml2 libxslt',
+  exec { 'brew link libxml2 libxslt libiconv':
+    command     => 'brew link --force libxml2 libxslt libiconv',
     provider    => 'shell',
     subscribe   => [ Package['libxml2'], Package['libxslt'] ],
     refreshonly => true,
@@ -46,5 +46,12 @@ class people::calorie::ruby {
     subscribe   => [ Package['libxml2'], Package['libxslt'], Package['libiconv'] ],
     refreshonly => true,
     require     => [ Package['libxml2'], Package['libxslt'], Package['libiconv'] ]
+  }
+  exec { 'brew unlink libxml2 libxslt libiconv':
+    command     => 'brew unlink libxml2 libxslt libiconv',
+    provider    => 'shell',
+    subscribe   => [ Package['libxml2'], Package['libxslt'] ],
+    refreshonly => true,
+    require     => [ Package['libxml2'], Package['libxslt'] ]
   }
 }

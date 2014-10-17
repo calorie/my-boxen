@@ -20,7 +20,7 @@ class people::calorie {
   include people::calorie::dotfiles
   include people::calorie::go
   include people::calorie::docker
-  include people::calorie::perl
+  # include people::calorie::perl
 
   # include projects::hpcss
   # include projects::hekk

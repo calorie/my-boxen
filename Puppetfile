@@ -101,6 +101,7 @@ github "better_touch_tools", "1.0.0"
 github "slack",              "1.0.4"
 github "vlc",                "1.1.0"
 github "perl",               "1.1.0", :repo => "typhonius/puppet-perl"
+github "onepassword",        "1.1.4"
 # ---/auto update---
 
 # Optional/custom modules. There are tons available at

@@ -179,6 +179,11 @@ GITHUBTARBALL
     nodejs (3.8.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-onepassword
+  specs:
+    onepassword (1.1.4)
+
+GITHUBTARBALL
   remote: boxen/puppet-openssl
   specs:
     openssl (1.0.0)
@@ -352,6 +357,7 @@ DEPENDENCIES
   mysql (= 1.2.0)
   nginx (= 1.4.3)
   nodejs (= 3.8.1)
+  onepassword (= 1.1.4)
   openssl (= 1.0.0)
   osx (= 2.2.0)
   perl (= 1.1.0)

@@ -16,6 +16,7 @@ class people::calorie::application {
   include caffeine
   include better_touch_tools
   include vlc
+  include onepassword
 
   include people::calorie::login_items
 

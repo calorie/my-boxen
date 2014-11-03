@@ -102,6 +102,7 @@ github "slack",              "1.0.4"
 github "vlc",                "1.1.0"
 github "perl",               "1.1.0", :repo => "typhonius/puppet-perl"
 github "onepassword",        "1.1.4"
+github "gyazo",              "1.0.0", :repo => "calorie/puppet-gyazo"
 # ---/auto update---
 
 # Optional/custom modules. There are tons available at

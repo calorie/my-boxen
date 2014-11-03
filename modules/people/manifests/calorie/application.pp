@@ -17,6 +17,7 @@ class people::calorie::application {
   include better_touch_tools
   include vlc
   include onepassword
+  include gyazo
 
   include people::calorie::login_items
 

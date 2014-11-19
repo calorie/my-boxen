@@ -6,7 +6,6 @@ class people::calorie::application {
   include appcleaner
   include dropbox
   include evernote
-  include jumpcut
   include flux
   include karabiner
   include karabiner::login_item
@@ -18,14 +17,10 @@ class people::calorie::application {
   include vlc
   include onepassword
   include gyazo
+  include clipmenu
+  include google_japanese_input
 
   include people::calorie::login_items
-
-  # google japanese input
-  package { 'GoogleJapaneseInput':
-    source   => 'http://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg',
-    provider => pkgdmg;
-  }
 
   # macvim
   package { 'macvim':

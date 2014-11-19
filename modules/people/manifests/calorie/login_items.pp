@@ -13,11 +13,11 @@ class people::calorie::login_items {
     require => Class['alfred'],
   }
 
-  osx_login_item { 'Jumpcut':
-    name => 'Jumpcut',
-    path => '/Applications/Jumpcut.app',
+  osx_login_item { 'ClipMenu':
+    name => 'ClipMenu',
+    path => '/Applications/ClipMenu.app',
     hidden => true,
-    require => Class['jumpcut'],
+    require => Class['clipmenu'],
   }
 
   osx_login_item { 'Flux':

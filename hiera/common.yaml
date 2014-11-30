@@ -28,3 +28,6 @@ ruby::rbenv_plugins:
   rbenv-ctags:
     ensure: v1.0.1
     source: tpope/rbenv-ctags
+  rbenv-update:
+    ensure: master
+    source: rkh/rbenv-update

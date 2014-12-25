@@ -3,13 +3,13 @@ ruby_opts: &ruby_opts
   LDFLAGS: "-L/opt/X11/lib"
   RUBY_CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
 ruby::version::env:
-  1.9.3-p545:
+  1.9.3-p551:
     <<: *ruby_opts
-  2.0.0-p481:
+  2.1.5:
     <<: *ruby_opts
-  2.1.2:
+  2.2.0:
     <<: *ruby_opts
-ruby::global_version: "2.1.2"
+ruby::global_version: "2.2.0"
 ruby::default_gems:
   - bundler
   - rubygems-update
@@ -20,10 +20,10 @@ ruby::default_gems:
   - rubocop
 ruby::rbenv_plugins:
   ruby-build:
-    ensure: v20140509.1
+    ensure: v20141225
     source: sstephenson/ruby-build
   rbenv-binstubs:
-    ensure: 1.3
+    ensure: v1.4
     source: ianheggie/rbenv-binstubs
   rbenv-ctags:
     ensure: v1.0.1

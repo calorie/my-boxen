@@ -32,4 +32,4 @@ ruby::rbenv_plugins:
     ensure: master
     source: rkh/rbenv-update
 go::chgo_version: "master"
-go::chgo_source: "calorie/chgo"
+go::chgo_source: "mattheath/chgo"

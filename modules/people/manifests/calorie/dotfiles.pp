@@ -1,5 +1,5 @@
 class people::calorie::dotfiles {
-  $home     = "/Users/${::luser}"
+  $home     = "/Users/${::boxen_user}"
   $dotfiles = "${home}/dotfiles"
 
   repository { $dotfiles:

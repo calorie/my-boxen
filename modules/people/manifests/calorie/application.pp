@@ -25,10 +25,7 @@ class people::calorie::application {
   # macvim
   package { 'macvim':
     ensure => installed,
-    install_options => [
-      '--with-cscope',
-      '--with-lua',
-    ];
+    install_options => ['--with-lua'];
   }
 
   # keyremap4macbook

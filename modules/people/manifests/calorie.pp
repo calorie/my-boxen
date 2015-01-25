@@ -26,8 +26,5 @@ class people::calorie {
   # include projects::hekk
   # include projects::precent
 
-  $home = "/Users/${::luser}"
-  $work = "${home}/work"
-
-  file { $work: ensure => 'directory' }
+  file { "/Users/${::boxen_user}/work": ensure => 'directory' }
 }

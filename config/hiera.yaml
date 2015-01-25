@@ -10,7 +10,7 @@
 :backends:
   - yaml
 :yaml:
-  :datadir: "/Users/%{::luser}/src/our-boxen/hiera"
+  :datadir: "%{::boxen_repodir}/hiera"
 :hierarchy:
   - "users/%{github_login}"
   - common

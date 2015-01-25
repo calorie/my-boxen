@@ -15,7 +15,7 @@ class people::calorie::ruby(
   # rbenv global
   file { "${boxen::config::home}/rbenv/version":
     ensure  => present,
-    owner   => $::luser,
+    owner   => $::boxen_user,
     mode    => '0644',
     content => "${global_version}\n",
   }
@@ -23,7 +23,7 @@ class people::calorie::ruby(
   # init vvm-rb
   exec { 'init vvm-rb':
     command  => "env -i zsh -c '${gem_env} vvm-rb install latest ${vvm_rb_options}'",
-    creates  => "/Users/${::luser}/.vvm-rb",
+    creates  => "/Users/${::boxen_user}/.vvm-rb",
     provider => 'shell',
     require  => [ Exec["Install default-gems for ${global_version}"], Package['zsh'] ]
   }
@@ -31,7 +31,7 @@ class people::calorie::ruby(
   # init refe2
   exec { 'init refe2 database':
     command  => "env -i zsh -c '${gem_env} bitclust setup --versions=1.9.3,2.0.0,2.1.0'",
-    creates  => "/Users/${::luser}/.bitclust",
+    creates  => "/Users/${::boxen_user}/.bitclust",
     provider => 'shell',
     require  => [ Exec["Install default-gems for ${global_version}"], Package['zsh'] ]
   }

@@ -7,7 +7,7 @@ class projects::hpcss {
     ];
   }
 
-  $hpcss = "/Users/${::luser}/work/hpcss"
+  $hpcss = "/Users/${::boxen_user}/work/hpcss"
 
   file { $hpcss:
     ensure => 'directory',

@@ -16,10 +16,10 @@ class people::calorie {
   include people::calorie::application
   include people::calorie::ruby
   include people::calorie::nodejs
-  include people::calorie::vichrome
   include people::calorie::dotfiles
   include people::calorie::go
   include people::calorie::docker
+  # include people::calorie::vichrome
   # include people::calorie::perl
 
   # include projects::hpcss

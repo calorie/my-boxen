@@ -6,7 +6,7 @@ class people::calorie::dotfiles {
     source  => 'calorie/dotfiles'
   }
 
-  exec { "echo y|${dotfiles}/setup.sh":
+  exec { "echo y|${dotfiles}/script/setup":
     cwd     => $dotfiles,
     creates => "${home}/.vimrc",
     require => [Repository[$dotfiles], Class['people::calorie::packages']]

@@ -28,7 +28,11 @@ class people::calorie::packages {
   }
 
   # hg
-  exec { 'pip install mercurial':
-    creates => "${boxen::config::homebrewdir}/share/python/hg"
+  package { 'mercurial':
+    require => Package['docutils'],
+  }
+  package { 'docutils':
+    ensure   => installed,
+    provider => pip,
   }
 }

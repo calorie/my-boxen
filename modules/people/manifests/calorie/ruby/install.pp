@@ -8,8 +8,8 @@ define people::calorie::ruby::install($version = $title) {
     command     => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=${version} rbenv exec gem install `cat ${default_gems}`'",
     provider    => 'shell',
     onlyif      => "test -f ${default_gems}",
-    subscribe   => [ Ruby::Version[$version], File[$default_gems] ],
+    subscribe   => [Ruby::Version[$version], File[$default_gems]],
     refreshonly => true,
-    require     => [ Ruby::Version[$version], Package['zsh'] ]
+    require     => [Ruby::Version[$version], Package['zsh']],
   }
 }

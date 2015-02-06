@@ -10,6 +10,6 @@ class people::calorie::docker {
     command     => 'boot2docker init',
     subscribe   => Package['boot2docker'],
     refreshonly => true,
-    require     => Package['boot2docker']
+    require     => Package['boot2docker'],
   }
 }

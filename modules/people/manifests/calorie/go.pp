@@ -9,6 +9,6 @@ class people::calorie::go {
   file { "${boxen::config::home}/chgo/version":
     content => "${global_version}\n",
     replace => true,
-    require => [ Go::Version[$global_version] ],
+    require => [Go::Version[$global_version]],
   }
 }

@@ -13,13 +13,6 @@ class people::calorie::login_items {
     require => Class['alfred'],
   }
 
-  osx_login_item { 'ClipMenu':
-    name    => 'ClipMenu',
-    path    => '/Applications/ClipMenu.app',
-    hidden  => true,
-    require => Class['clipmenu'],
-  }
-
   osx_login_item { 'Flux':
     name    => 'Flux',
     path    => '/Applications/Flux.app',

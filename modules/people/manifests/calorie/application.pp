@@ -17,7 +17,6 @@ class people::calorie::application {
   include vlc
   include onepassword
   include gyazo
-  include clipmenu
   include google_japanese_input
 
   include people::calorie::login_items

@@ -103,7 +103,6 @@ github "vlc",                   "1.1.0"
 github "perl",                  "1.1.0", :repo => "typhonius/puppet-perl"
 github "onepassword",           "1.1.4"
 github "gyazo",                 "1.0.0", :repo => "calorie/puppet-gyazo"
-github "clipmenu",              "1.0.0"
 github "google_japanese_input", "1.0.0", :repo => "calorie/puppet-google_japanese_input"
 # ---/auto update---
 

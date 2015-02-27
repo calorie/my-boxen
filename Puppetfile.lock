@@ -44,11 +44,6 @@ GITHUBTARBALL
     chrome (1.1.2)
 
 GITHUBTARBALL
-  remote: boxen/puppet-clipmenu
-  specs:
-    clipmenu (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-cmake
   specs:
     cmake (1.0.1)
@@ -340,12 +335,11 @@ DEPENDENCIES
   automake (= 1.0.0)
   better_touch_tools (= 1.0.0)
   boxen (= 3.10.1)
+  brewcask (= 0.0.4)
   caffeine (= 1.0.0)
   chrome (= 1.1.2)
-  clipmenu (= 1.0.0)
   cmake (= 1.0.1)
   ctags (= 1.0.0)
-  brewcask (= 0.0.4)
   dnsmasq (= 2.0.1)
   dropbox (= 1.2.0)
   evernote (= 2.0.4)

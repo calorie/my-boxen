@@ -5,9 +5,9 @@ ruby_opts: &ruby_opts
 ruby::version::env:
   1.9.3-p551:
     <<: *ruby_opts
-  2.2.0:
+  2.2.1:
     <<: *ruby_opts
-ruby::global_version: "2.2.0"
+ruby::global_version: "2.2.1"
 ruby::default_gems:
   - bundler
   - rubygems-update
@@ -18,7 +18,7 @@ ruby::default_gems:
   - rubocop
 ruby::rbenv_plugins:
   ruby-build:
-    ensure: v20141225
+    ensure: v20150303
     source: sstephenson/ruby-build
   rbenv-binstubs:
     ensure: v1.4

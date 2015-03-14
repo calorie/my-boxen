@@ -94,17 +94,17 @@ github "appcleaner",            "1.0.0"
 github "flux",                  "1.0.0"
 github "karabiner",             "1.0.1"
 github "heroku",                "2.0.0"
-github "teamviewer",            "1.0.2", :repo => "singuerinc/puppet-teamviewer"
 github "caffeine",              "1.0.0"
 github "memcached",             "2.0.0"
 github "better_touch_tools",    "1.0.0"
 github "slack",                 "1.0.4"
 github "vlc",                   "1.1.0"
-github "perl",                  "1.1.0", :repo => "typhonius/puppet-perl"
 github "onepassword",           "1.1.4"
+# ---/auto update---
+github "teamviewer",            "1.0.2", :repo => "singuerinc/puppet-teamviewer"
+github "perl",                  "1.1.0", :repo => "typhonius/puppet-perl"
 github "gyazo",                 "1.0.0", :repo => "calorie/puppet-gyazo"
 github "google_japanese_input", "1.0.0", :repo => "calorie/puppet-google_japanese_input"
-# ---/auto update---
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

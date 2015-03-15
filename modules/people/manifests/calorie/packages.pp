@@ -1,12 +1,6 @@
 include homebrew
 
 class people::calorie::packages {
-  homebrew::tap {
-    [
-      'peco/peco',
-    ]:
-  }
-
   package {
     [
       'wget',
@@ -24,15 +18,7 @@ class people::calorie::packages {
       'ssh-copy-id',
       'peco',
       'direnv',
+      'mercurial',
     ]:
-  }
-
-  # hg
-  package { 'mercurial':
-    require => Package['docutils'],
-  }
-  package { 'docutils':
-    ensure   => installed,
-    provider => pip,
   }
 }

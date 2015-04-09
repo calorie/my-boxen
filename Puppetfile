@@ -105,6 +105,7 @@ github "teamviewer",            "1.0.2", :repo => "singuerinc/puppet-teamviewer"
 github "perl",                  "1.1.2", :repo => "typhonius/puppet-perl"
 github "gyazo",                 "1.0.0", :repo => "calorie/puppet-gyazo"
 github "google_japanese_input", "1.0.0", :repo => "calorie/puppet-google_japanese_input"
+github "macid",                 "1.1.1", :repo => "calorie/puppet-macid"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

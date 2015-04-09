@@ -18,6 +18,7 @@ class people::calorie::application {
   include onepassword
   include gyazo
   include google_japanese_input
+  include macid
 
   include people::calorie::login_items
 

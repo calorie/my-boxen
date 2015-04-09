@@ -1,6 +1,8 @@
 include homebrew
 
 class people::calorie::packages {
+  homebrew::tap { 'homebrew/dupes': }
+
   package {
     [
       'wget',
@@ -19,6 +21,7 @@ class people::calorie::packages {
       'peco',
       'direnv',
       'mercurial',
+      'homebrew/dupes/grep',
     ]:
   }
 }

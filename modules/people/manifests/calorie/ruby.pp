@@ -38,7 +38,6 @@ class people::calorie::ruby(
   }
 
   # nokogiri
-  homebrew::tap { ['homebrew/dupes']: }
   package {
     [
       'libxml2',

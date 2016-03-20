@@ -24,4 +24,8 @@ class people::calorie::packages {
       'homebrew/dupes/grep',
     ]:
   }
+
+  file { "${boxen::config::home}/homebrew/bin/ctags":
+    alias => 'ctags',
+  }
 }

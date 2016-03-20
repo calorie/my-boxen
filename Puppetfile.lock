@@ -26,7 +26,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.10.2)
+    boxen (3.11.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-brewcask
@@ -86,7 +86,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
-    gcc (2.2.0)
+    gcc (3.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-gdb
@@ -96,7 +96,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
-    git (2.7.5)
+    git (2.7.92)
 
 GITHUBTARBALL
   remote: boxen/puppet-go
@@ -111,12 +111,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (1.11.2)
+    homebrew (1.13.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
-    hub (1.4.0)
+    hub (1.4.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-icu4c
@@ -171,12 +171,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
-    nginx (1.4.4)
+    nginx (1.6.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (4.0.0)
+    nodejs (5.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-onepassword
@@ -196,7 +196,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
-    phantomjs (2.3.0)
+    phantomjs (3.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-php
@@ -226,7 +226,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-repository
   specs:
-    repository (2.3.0)
+    repository (2.4.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-ruby
@@ -306,17 +306,17 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
-    inifile (1.1.1)
+    inifile (1.4.1)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
-    stdlib (4.2.1)
+    stdlib (4.7.0)
 
 GITHUBTARBALL
   remote: ripienaar/puppet-module-data
   specs:
-    module_data (0.0.3)
+    module_data (0.0.4)
 
 GITHUBTARBALL
   remote: singuerinc/puppet-teamviewer
@@ -334,7 +334,7 @@ DEPENDENCIES
   appcleaner (= 1.0.0)
   automake (= 1.0.0)
   better_touch_tools (= 3.0.0)
-  boxen (= 3.10.2)
+  boxen (= 3.11.1)
   brewcask (= 0.0.6)
   caffeine (= 1.0.0)
   chrome (= 1.2.0)
@@ -346,44 +346,44 @@ DEPENDENCIES
   firefox (= 1.2.3)
   flux (= 1.0.1)
   foreman (= 1.2.0)
-  gcc (= 2.2.0)
+  gcc (= 3.0.2)
   gdb (= 1.0.0)
-  git (= 2.7.5)
+  git (= 2.7.92)
   go (= 2.1.0)
   google_japanese_input (= 1.0.0)
   gyazo (= 1.0.0)
   heroku (= 2.1.1)
-  homebrew (= 1.11.2)
-  hub (= 1.4.0)
+  homebrew (= 1.13.0)
+  hub (= 1.4.1)
   icu4c (= 1.0.1)
   imagemagick (= 1.3.0)
-  inifile (= 1.1.1)
+  inifile (= 1.4.1)
   iterm2 (= 1.2.4)
   java (= 1.1.0)
   karabiner (= 1.0.6)
   libtool (= 1.0.0)
   macvim (= 1.0.0)
   memcached (= 2.0.0)
-  module_data (= 0.0.3)
+  module_data (= 0.0.4)
   mongodb (= 2.6.1)
   mysql (= 1.2.2)
-  nginx (= 1.4.4)
-  nodejs (= 4.0.0)
+  nginx (= 1.6.0)
+  nodejs (= 5.0.0)
   onepassword (= 1.1.5)
   openssl (= 1.0.0)
   osx (= 2.8.0)
   perl (= 1.1.2)
-  phantomjs (= 2.3.0)
+  phantomjs (= 3.0.0)
   php (= 1.2.6)
   pkgconfig (= 1.0.0)
   postgresql (= 3.0.3)
   python (= 2.0.0)
   redis (= 3.1.0)
-  repository (= 2.3.0)
+  repository (= 2.4.1)
   ruby (= 7.3.0)
   skype (= 1.1.0)
   slack (= 1.0.6)
-  stdlib (= 4.2.1)
+  stdlib (= 4.7.0)
   sudo (= 1.0.0)
   sysctl (= 1.0.1)
   teamviewer (= 1.0.2)

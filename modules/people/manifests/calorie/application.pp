@@ -4,19 +4,19 @@ class people::calorie::application {
   include alfred
   include skype
   include appcleaner
-  include dropbox
-  include evernote
+  # include dropbox
+  # include evernote
   include flux
   include karabiner
   include karabiner::login_item
-  include teamviewer
+  # include teamviewer
   include virtualbox
-  include vagrant
+  # include vagrant
   include caffeine
   include better_touch_tools
-  include vlc
+  # include vlc
   include onepassword
-  include gyazo
+  # include gyazo
   include google_japanese_input
   include macid
 
@@ -41,9 +41,9 @@ class people::calorie::application {
   }
 
   # vagrant
-  vagrant::plugin {
-    [
-      'vagrant-omnibus',
-    ]:
-  }
+  #vagrant::plugin {
+  #   [
+  #     'vagrant-omnibus',
+  #   ]:
+  # }
 }

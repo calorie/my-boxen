@@ -1,10 +1,10 @@
 class people::calorie::login_items {
-  osx_login_item { 'Dropbox':
-    name    => 'Dropbox',
-    path    => '/Applications/Dropbox.app',
-    hidden  => true,
-    require => Package['Dropbox'],
-  }
+  # osx_login_item { 'Dropbox':
+  #   name    => 'Dropbox',
+  #   path    => '/Applications/Dropbox.app',
+  #   hidden  => true,
+  #   require => Package['Dropbox'],
+  # }
 
   osx_login_item { 'Alfred 2':
     name    => 'Alfred 2',

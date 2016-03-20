@@ -304,6 +304,11 @@ GITHUBTARBALL
     gyazo (1.0.0)
 
 GITHUBTARBALL
+  remote: calorie/puppet-macid
+  specs:
+    macid (1.1.1)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.4.1)
@@ -362,6 +367,7 @@ DEPENDENCIES
   java (= 1.1.0)
   karabiner (= 1.0.6)
   libtool (= 1.0.0)
+  macid (= 1.1.1)
   macvim (= 1.0.0)
   memcached (= 2.0.0)
   module_data (= 0.0.4)

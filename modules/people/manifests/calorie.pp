@@ -20,10 +20,9 @@ class people::calorie {
   include people::calorie::go
   include people::calorie::docker
   # include people::calorie::perl
+  include people::calorie::misc
 
   # include projects::hpcss
   # include projects::hekk
   # include projects::precent
-
-  file { "/Users/${::boxen_user}/work": ensure => 'directory' }
 }

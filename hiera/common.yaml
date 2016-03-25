@@ -29,3 +29,4 @@ ruby::rbenv_plugins:
     source: rkh/rbenv-update
 go::chgo_version: "master"
 go::chgo_source: "mattheath/chgo"
+alfred::version: "2.8.2_432"

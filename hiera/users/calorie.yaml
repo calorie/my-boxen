@@ -1,4 +1,12 @@
 ---
+people::calorie::go::versions:
+  - 1.1.2
+people::calorie::go::global_version: "1.1.2"
+people::calorie::nodejs::nodejs_global: "0.10"
+people::calorie::nodejs::global_modules:
+  - coffee-script
+  - grunt-cli
+people::calorie::perl::version: "5.21.4"
 people::calorie::ruby::vvmopts:
   - --enable-multibyte
   - --with-features=big

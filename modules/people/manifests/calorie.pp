@@ -1,4 +1,14 @@
 class people::calorie {
+  # dirty way of ensuring that installer can install things
+  sudoers { 'installer':
+    users    => $::boxen_user,
+    hosts    => 'ALL',
+    commands => [
+      '(ALL) SETENV:NOPASSWD: /usr/sbin/installer',
+    ],
+    type     => 'user_spec',
+  }
+
   include heroku
   include imagemagick
   include iterm2::stable

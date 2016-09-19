@@ -1,6 +1,6 @@
 class people::calorie::nodejs(
   $nodejs_global  = '0.12',
-  $global_modules = ['coffee-script'],
+  $global_modules = ['grunt-cli'],
 ) {
 
   unless defined(Nodejs::Version[$nodejs_global]) {

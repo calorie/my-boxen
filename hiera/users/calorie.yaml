@@ -1,4 +1,52 @@
 ---
+boxen::personal::homebrew_packages:
+  - automake
+  - cmake
+  - ctags
+  - direnv
+  - docker
+  - docker-machine
+  - fontforge
+  - gdb
+  - htop
+  - homebrew/dupes/grep
+  - icu4c
+  - libtool
+  - lua
+  - luajit
+  - mercurial
+  - nkf
+  - peco
+  - pstree
+  - reattach-to-user-namespace
+  - rmtrash
+  - ssh-copy-id
+  - the_silver_searcher
+  - tig
+  - tmux
+  - vim
+  - wget
+boxen::personal::osx_apps:
+  - 1password
+  - alfred
+  - appcleaner
+  - bettertouchtool
+  - caffeine
+  - dropbox
+  - evernote
+  - firefox
+  - flux
+  - gyazo
+  - google-chrome
+  - google-japanese-ime
+  - iterm2
+  - macid
+  - slack
+  - teamviewer
+  - vagrant
+  - virtualbox
+  - vlc
+
 people::calorie::go::versions:
   - 1.7.0
 people::calorie::go::global_version: "1.7.0"

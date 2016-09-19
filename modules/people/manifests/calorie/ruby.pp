@@ -45,25 +45,25 @@ class people::calorie::ruby(
       'libiconv',
     ]:
   }
-  exec { 'brew link libxml2 libxslt libiconv':
-    command     => 'brew link --force libxml2 libxslt libiconv',
-    provider    => 'shell',
-    subscribe   => [Package['libxml2'], Package['libxslt']],
-    refreshonly => true,
-    require     => [Package['libxml2'], Package['libxslt']],
-  }
-  exec { 'bundle config nokogiri':
-    command     => "env -i zsh -c '${gem_env} bundle config --global build.nokogiri --use-system-libraries --with-iconv-dir=$(brew --prefix libiconv) --with-xml2-dir=$(brew --prefix libxml2) --with-xslt-dir=$(brew --prefix libxslt)'",
-    provider    => 'shell',
-    subscribe   => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
-    refreshonly => true,
-    require     => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
-  }
-  exec { 'brew unlink libxml2 libxslt libiconv':
-    command     => 'brew unlink libxml2 libxslt libiconv',
-    provider    => 'shell',
-    subscribe   => [Package['libxml2'], Package['libxslt']],
-    refreshonly => true,
-    require     => [Package['libxml2'], Package['libxslt']],
-  }
+  # exec { 'brew link libxml2 libxslt libiconv':
+  #   command     => 'brew link --force libxml2 libxslt libiconv',
+  #   provider    => 'shell',
+  #   subscribe   => [Package['libxml2'], Package['libxslt']],
+  #   refreshonly => true,
+  #   require     => [Package['libxml2'], Package['libxslt']],
+  # }
+  # exec { 'bundle config nokogiri':
+  #   command     => "env -i zsh -c '${gem_env} bundle config --global build.nokogiri --use-system-libraries --with-iconv-dir=$(brew --prefix libiconv) --with-xml2-dir=$(brew --prefix libxml2) --with-xslt-dir=$(brew --prefix libxslt)'",
+  #   provider    => 'shell',
+  #   subscribe   => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
+  #   refreshonly => true,
+  #   require     => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
+  # }
+  # exec { 'brew unlink libxml2 libxslt libiconv':
+  #   command     => 'brew unlink libxml2 libxslt libiconv',
+  #   provider    => 'shell',
+  #   subscribe   => [Package['libxml2'], Package['libxslt']],
+  #   refreshonly => true,
+  #   require     => [Package['libxml2'], Package['libxslt']],
+  # }
 }

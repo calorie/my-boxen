@@ -3,34 +3,34 @@ class people::calorie::login_items {
     name    => 'Alfred 2',
     path    => '/Applications/Alfred 2.app',
     hidden  => true,
-    require => Class['alfred'],
+    require => Class['boxen::personal'],
   }
 
   osx_login_item { 'BetterTouchTool':
     name    => 'BetterTouchTool',
     path    => '/Applications/BetterTouchTool.app',
     hidden  => true,
-    require => Class['better_touch_tools'],
+    require => Class['boxen::personal'],
   }
 
   osx_login_item { 'Caffeine':
     name    => 'Caffeine',
     path    => '/Applications/Caffeine.app',
     hidden  => true,
-    require => Class['caffeine'],
+    require => Class['boxen::personal'],
   }
 
   osx_login_item { 'Dropbox':
     name    => 'Dropbox',
     path    => '/Applications/Dropbox.app',
     hidden  => true,
-    require => Package['Dropbox'],
+    require => Class['boxen::personal'],
   }
 
   # osx_login_item { 'Flux':
   #   name    => 'Flux',
   #   path    => '/Applications/Flux.app',
   #   hidden  => true,
-  #   require => Class['flux'],
+  #   require => Class['boxen::personal'],
   # }
 }

@@ -31,7 +31,7 @@ class people::calorie::ruby(
 
   # init refe2
   exec { 'init refe2 database':
-    command  => "env -i zsh -c '${gem_env} bitclust setup --versions=1.9.3,2.2.0'",
+    command  => "env -i zsh -c '${gem_env} bitclust setup --versions=2.3.0'",
     creates  => "/Users/${::boxen_user}/.bitclust",
     provider => 'shell',
     require  => [Exec["Install default-gems for ${global_version}"], Package['zsh']],

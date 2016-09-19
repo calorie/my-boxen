@@ -1,5 +1,5 @@
 class people::calorie::nodejs(
-  $nodejs_global  = '0.10',
+  $nodejs_global  = '0.12',
   $global_modules = ['coffee-script'],
 ) {
 

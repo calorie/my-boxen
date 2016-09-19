@@ -58,7 +58,7 @@ github "stdlib",      "4.7.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
 
-github "java",                  "1.1.0"
+github "java",                  "1.8.4"
 # ---auto update---
 github "sysctl",                "1.0.1"
 github "dropbox",               "1.4.1"

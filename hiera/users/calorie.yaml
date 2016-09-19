@@ -1,8 +1,8 @@
 ---
 people::calorie::go::versions:
-  - 1.1.2
-people::calorie::go::global_version: "1.1.2"
-people::calorie::nodejs::nodejs_global: "0.10"
+  - 1.7.0
+people::calorie::go::global_version: "1.7.0"
+people::calorie::nodejs::nodejs_global: "0.12"
 people::calorie::nodejs::global_modules:
   - coffee-script
   - grunt-cli

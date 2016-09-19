@@ -26,6 +26,7 @@ boxen::personal::homebrew_packages:
   - tmux
   - vim
   - wget
+  - zlib
 boxen::personal::osx_apps:
   - 1password
   - alfred

@@ -29,6 +29,3 @@ ruby::rbenv_plugins:
     source: rkh/rbenv-update
 go::chgo_version: "master"
 go::chgo_source: "mattheath/chgo"
-alfred::version: "3.1.1_737"
-virtualbox::version: "5.1.6"
-virtualbox::patch_level: "110634"

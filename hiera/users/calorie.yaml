@@ -49,8 +49,8 @@ boxen::personal::osx_apps:
   - vlc
 
 people::calorie::go::versions:
-  - 1.7.0
-people::calorie::go::global_version: "1.7.0"
+  - 1.7
+people::calorie::go::global_version: "1.7"
 people::calorie::nodejs::nodejs_global: "0.12"
 people::calorie::nodejs::global_modules:
   - coffee-script

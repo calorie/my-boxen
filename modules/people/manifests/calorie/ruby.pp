@@ -4,22 +4,13 @@ class people::calorie::ruby(
   require openssl
   package { ['readline']: }
 
-  $rubies = keys(hiera_hash('ruby::version::env', {}))
-  $global_version = hiera('ruby::global_version', 'system')
+  $rubies         = keys(hiera_hash('ruby::version::env', {}))
+  $global_version = hiera('ruby::global::version', 'system')
   $vvm_rb_options = join($vvmopts, ' ')
-  $gem_env = "source ${boxen::config::home}/env.sh && RBENV_VERSION=${global_version}"
+  $gem_env        = "source ${boxen::config::home}/env.sh && RBENV_VERSION=${global_version}"
 
   # install ruby
   people::calorie::ruby::install { $rubies: }
-
-  # rbenv global
-  file { "${boxen::config::home}/rbenv/version":
-    ensure  => present,
-    owner   => $::boxen_user,
-    mode    => '0644',
-    content => "${global_version}\n",
-    require => [Ruby::Version[$global_version]],
-  }
 
   # init vvm-rb
   exec { 'init vvm-rb':
@@ -52,13 +43,13 @@ class people::calorie::ruby(
   #   refreshonly => true,
   #   require     => [Package['libxml2'], Package['libxslt']],
   # }
-  # exec { 'bundle config nokogiri':
-  #   command     => "env -i zsh -c '${gem_env} bundle config --global build.nokogiri --use-system-libraries --with-iconv-dir=$(brew --prefix libiconv) --with-xml2-dir=$(brew --prefix libxml2) --with-xslt-dir=$(brew --prefix libxslt)'",
-  #   provider    => 'shell',
-  #   subscribe   => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
-  #   refreshonly => true,
-  #   require     => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
-  # }
+  exec { 'bundle config nokogiri':
+    command     => "env -i zsh -c '${gem_env} bundle config --global build.nokogiri --use-system-libraries --with-iconv-dir=${boxen::config::homebrewdir}/opt/libiconv --with-xml2-dir=${boxen::config::homebrewdir}/opt/libxml2 --with-xslt-dir=${boxen::config::homebrewdir}/opt/libxslt'",
+    provider    => 'shell',
+    subscribe   => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
+    refreshonly => true,
+    require     => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
+  }
   # exec { 'brew unlink libxml2 libxslt libiconv':
   #   command     => 'brew unlink libxml2 libxslt libiconv',
   #   provider    => 'shell',

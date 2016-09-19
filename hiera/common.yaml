@@ -5,16 +5,8 @@ ruby_opts: &ruby_opts
 ruby::version::env:
   2.3.1:
     <<: *ruby_opts
-ruby::global_version: "2.3.1"
-ruby::default_gems:
-  - bundler
-  - rubygems-update
-  - pry
-  - tmuxinator
-  - vvm-rb
-  - refe2
-  - rubocop
-ruby::rbenv_plugins:
+ruby::global::version: "2.3.1"
+ruby::rbenv::plugins:
   ruby-build:
     ensure: v20160913
     source: sstephenson/ruby-build

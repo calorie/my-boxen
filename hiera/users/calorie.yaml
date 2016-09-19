@@ -86,3 +86,11 @@ people::calorie::ruby::vvmopts:
   - --disable-largefile
   - --with-modified-by=\"Yuu Shigetani\"
   - --with-compiledby=\"Yuu Shigetani\"
+people::calorie::ruby::default_gems:
+  - bundler
+  - rubygems-update
+  - pry
+  - tmuxinator
+  - vvm-rb
+  - refe2
+  - rubocop

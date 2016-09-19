@@ -11,7 +11,7 @@ class people::calorie::application {
     require         => Package['lua'],
   }
 
-  # keyremap4macbook
+  # karabiner
   karabiner::private_xml{ 'private.xml':
     source => "${boxen::config::repodir}/modules/people/manifests/calorie/private.xml"
   }

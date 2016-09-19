@@ -11,7 +11,6 @@ class people::calorie {
 
   include heroku
   include imagemagick
-  include iterm2::stable
   include java
   include memcached
   include mysql

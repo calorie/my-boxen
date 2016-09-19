@@ -1,6 +1,6 @@
 class people::calorie::go(
-  $versions       = ['1.7.0'],
-  $global_version = '1.7.0'
+  $versions       = ['1.7'],
+  $global_version = '1.7'
 ) {
   include go
 

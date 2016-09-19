@@ -12,7 +12,7 @@ class people::calorie::dotfiles {
     require => [Repository[$dotfiles], Class['people::calorie::packages']],
   }
 
-  Git::Config::Global <| title == 'core.excludesfile' |> {
+  Git::Config::Global<| title == 'core.excludesfile' |> {
     value => '~/.gitignore'
   }
 }

@@ -13,7 +13,7 @@ class people::calorie {
   include imagemagick
   include java
   include memcached
-  include mysql
+  # include mysql
   include pkgconfig
   include postgresql
   include python

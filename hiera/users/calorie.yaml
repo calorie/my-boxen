@@ -15,6 +15,7 @@ boxen::personal::homebrew_packages:
   - lua
   - luajit
   - mercurial
+  - mysql
   - nkf
   - peco
   - pstree

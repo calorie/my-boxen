@@ -9,6 +9,7 @@ class people::calorie::dotfiles {
   exec { "echo y|${dotfiles}/script/setup":
     cwd     => $dotfiles,
     creates => "${home}/.vimrc",
+    timeout => 1800,
     require => [Repository[$dotfiles], Class['boxen::personal']],
   }
 

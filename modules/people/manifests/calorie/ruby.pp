@@ -17,6 +17,7 @@ class people::calorie::ruby(
     command  => "env -i zsh -c '${gem_env} vvm install latest ${vvm_rb_options}'",
     creates  => "/Users/${::boxen_user}/.vvm-rb",
     provider => 'shell',
+    timeout  => 1800,
     require  => [Exec["Install default-gems for ${global_version}"], Package['zsh'], Package['mercurial']],
   }
 

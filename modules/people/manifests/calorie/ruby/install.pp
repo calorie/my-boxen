@@ -16,6 +16,6 @@ define people::calorie::ruby::install($version = $title) {
     onlyif      => "test -f ${default_gems_path}",
     subscribe   => [Ruby::Version[$version], File[$default_gems_path]],
     refreshonly => true,
-    require     => [Ruby::Version[$version], Package['zsh']],
+    require     => [Ruby::Version[$version], Package['zsh'], File[$default_gems_path]],
   }
 }

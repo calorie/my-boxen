@@ -1,7 +1,6 @@
 class people::calorie::ruby(
   $vvmopts = []
 ) {
-  require openssl
   package { ['readline']: }
 
   $rubies         = keys(hiera_hash('ruby::version::env', {}))
@@ -18,7 +17,7 @@ class people::calorie::ruby(
     creates  => "/Users/${::boxen_user}/.vvm-rb",
     provider => 'shell',
     timeout  => 1800,
-    require  => [Exec["Install default-gems for ${global_version}"], Package['zsh'], Package['mercurial']],
+    require  => [Exec["Install default-gems for ${global_version}"], Package['zsh'], Class['people::calorie::mercurial']],
   }
 
   # init refe2

@@ -1,6 +1,7 @@
 require boxen::environment
 require homebrew
 require gcc
+require openssl
 
 Exec {
   group       => 'staff',
@@ -8,6 +9,7 @@ Exec {
   user        => $boxen_user,
 
   path => [
+    "${boxen::config::homebrewdir}/opt/openssl/bin",
     "${boxen::config::home}/rbenv/shims",
     "${boxen::config::home}/rbenv/bin",
     "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
@@ -19,6 +21,8 @@ Exec {
   ],
 
   environment => [
+    "LD_LIBRARY_PATH=${boxen::config::homebrewdir}/opt/openssl/lib",
+    "CPATH=${boxen::config::homebrewdir}/opt/openssl/include",
     "HOMEBREW_CACHE=${homebrew::config::cachedir}",
     "HOME=/Users/${::boxen_user}"
   ]

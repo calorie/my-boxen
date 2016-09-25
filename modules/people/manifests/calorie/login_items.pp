@@ -3,8 +3,7 @@ class people::calorie::login_items {
     name        => 'Alfred 2',
     path        => '/Applications/Alfred 2.app',
     hidden      => true,
-    subscribe   => Package['alfred'],
-    refreshonly => true,
+    ensure      => present,
     require     => Package['alfred'],
   }
 
@@ -12,8 +11,7 @@ class people::calorie::login_items {
     name        => 'BetterTouchTool',
     path        => '/Applications/BetterTouchTool.app',
     hidden      => true,
-    subscribe   => Package['bettertouchtool'],
-    refreshonly => true,
+    ensure      => present,
     require     => Package['bettertouchtool'],
   }
 
@@ -21,8 +19,7 @@ class people::calorie::login_items {
     name        => 'Caffeine',
     path        => '/Applications/Caffeine.app',
     hidden      => true,
-    subscribe   => Package['caffeine'],
-    refreshonly => true,
+    ensure      => present,
     require     => Package['caffeine'],
   }
 
@@ -30,8 +27,7 @@ class people::calorie::login_items {
     name        => 'Dropbox',
     path        => '/Applications/Dropbox.app',
     hidden      => true,
-    subscribe   => Package['dropbox'],
-    refreshonly => true,
+    ensure      => present,
     require     => Package['dropbox'],
   }
 
@@ -39,8 +35,7 @@ class people::calorie::login_items {
   #   name        => 'Flux',
   #   path        => '/Applications/Flux.app',
   #   hidden      => true,
-  #   subscribe   => Package['flux'],
-  #   refreshonly => true,
+  #   ensure      => present,
   #   require     => Package['flux'],
   # }
 
@@ -48,8 +43,7 @@ class people::calorie::login_items {
     name        => 'MacID',
     path        => '/Applications/MacID.app',
     hidden      => true,
-    subscribe   => Package['macid'],
-    refreshonly => true,
+    ensure      => present,
     require     => Package['macid'],
   }
 }

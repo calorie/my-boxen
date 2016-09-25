@@ -2,7 +2,13 @@ class people::calorie::ruby(
   $vvmopts = []
 ) {
   include openssl
-  package { ['readline']: }
+  package {
+    [
+      'readline',
+      'libyaml',
+      'libffi'
+    ]:
+  }
 
   $rubies         = keys(hiera_hash('ruby::version::env', {}))
   $global_version = hiera('ruby::global::version', 'system')

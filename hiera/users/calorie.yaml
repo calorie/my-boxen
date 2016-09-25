@@ -53,6 +53,9 @@ boxen::personal::osx_apps:
   - vagrant
   - virtualbox
   - vlc
+boxen::personal::includes:
+  - homebrew
+  - brewcask
 
 people::calorie::go::versions:
   - 1.7

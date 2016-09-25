@@ -1,6 +1,7 @@
 ---
 ruby_opts: &ruby_opts
-  LDFLAGS: '-L/opt/X11/lib'
+  LDFLAGS: '-L/opt/X11/lib -L/usr/local/opt/openssl/lib'
+  CPPFLAGS: '-I/usr/local/opt/openssl/include'
   RUBY_CONFIGURE_OPTS: '--enable-shared --with-openssl-dir=/user/local/opt/openssl --with-readline-dir=/user/local/opt/readline'
 ruby::version::env:
   2.3.1:

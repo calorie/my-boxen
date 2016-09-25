@@ -20,19 +20,19 @@ class people::calorie::ruby(
 
   # init vvm-rb
   exec { 'init vvm-rb':
-    command  => "env -i zsh -c '${gem_env} vvm install latest ${vvm_rb_options}'",
+    command  => "${gem_env} vvm install latest ${vvm_rb_options}",
     creates  => "/Users/${::boxen_user}/.vvm-rb",
     provider => 'shell',
     timeout  => 1800,
-    require  => [Exec["Install default-gems for ${global_version}"], Package['zsh'], Class['people::calorie::mercurial']],
+    require  => [Exec["Install default-gems for ${global_version}"], Class['people::calorie::mercurial']],
   }
 
   # init refe2
   exec { 'init refe2 database':
-    command  => "env -i zsh -c '${gem_env} bitclust setup --versions=2.3.0'",
+    command  => "${gem_env} bitclust setup --versions=2.3.0",
     creates  => "/Users/${::boxen_user}/.bitclust",
     provider => 'shell',
-    require  => [Exec["Install default-gems for ${global_version}"], Package['zsh']],
+    require  => [Exec["Install default-gems for ${global_version}"]],
   }
 
   # nokogiri
@@ -51,7 +51,7 @@ class people::calorie::ruby(
   #   require     => [Package['libxml2'], Package['libxslt']],
   # }
   exec { 'bundle config nokogiri':
-    command     => "env -i zsh -c '${gem_env} bundle config --global build.nokogiri --use-system-libraries --with-iconv-dir=${boxen::config::homebrewdir}/opt/libiconv --with-xml2-dir=${boxen::config::homebrewdir}/opt/libxml2 --with-xslt-dir=${boxen::config::homebrewdir}/opt/libxslt'",
+    command     => "${gem_env} bundle config --global build.nokogiri --use-system-libraries --with-iconv-dir=${boxen::config::homebrewdir}/opt/libiconv --with-xml2-dir=${boxen::config::homebrewdir}/opt/libxml2 --with-xslt-dir=${boxen::config::homebrewdir}/opt/libxslt",
     provider    => 'shell',
     subscribe   => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
     refreshonly => true,

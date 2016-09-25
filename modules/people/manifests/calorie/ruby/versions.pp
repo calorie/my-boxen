@@ -8,7 +8,8 @@ define people::calorie::ruby::versions($version = $title) {
 
   file { $default_gems_path:
     ensure  => present,
-    content => $default_gems_content
+    content => $default_gems_content,
+    require => [Ruby::Version[$version]],
   }
 
   people::calorie::ruby::gems { $default_gems:

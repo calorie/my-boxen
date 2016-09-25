@@ -20,6 +20,6 @@ ruby::rbenv::plugins:
   rbenv-update:
     ensure: master
     source: rkh/rbenv-update
-ruby::build::ensure:  v20160913
+ruby::build::ensure: v20160913
 go::chgo_version: master
 go::chgo_source: mattheath/chgo

@@ -56,12 +56,12 @@ boxen::personal::osx_apps:
 
 people::calorie::go::versions:
   - 1.7
-people::calorie::go::global_version: "1.7"
-people::calorie::nodejs::nodejs_global: "0.12"
+people::calorie::go::global_version: 1.7
+people::calorie::nodejs::nodejs_global: 0.12
 people::calorie::nodejs::global_modules:
   - coffee-script
   - grunt-cli
-people::calorie::perl::version: "5.21.4"
+people::calorie::perl::version: 5.21.4
 people::calorie::ruby::vvmopts:
   - --enable-multibyte
   - --with-features=big

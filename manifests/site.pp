@@ -23,6 +23,7 @@ Exec {
   environment => [
     "LD_LIBRARY_PATH=${boxen::config::homebrewdir}/opt/openssl/lib",
     "CPATH=${boxen::config::homebrewdir}/opt/openssl/include",
+    "PKG_CONFIG_PATH=${boxen::config::homebrewdir}/opt/openssl/lib/pkgconfig",
     "HOMEBREW_CACHE=${homebrew::config::cachedir}",
     "HOME=/Users/${::boxen_user}"
   ]

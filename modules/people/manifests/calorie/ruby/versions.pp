@@ -1,4 +1,4 @@
-define people::calorie::ruby::version($version = $title) {
+define people::calorie::ruby::versions($version = $title) {
   ruby::version { $version: }
 
   # install default gems
@@ -10,7 +10,7 @@ define people::calorie::ruby::version($version = $title) {
     content => $default_gems_content
   }
 
-  people::calorie::ruby::gem { $default_gems:
+  people::calorie::ruby::gems { $default_gems:
     ruby_version => $version
   }
 }

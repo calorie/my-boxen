@@ -1,4 +1,4 @@
-define people::calorie::ruby::gem(
+define people::calorie::ruby::gems(
   $gem          = $title,
   $ruby_version = '*',
 ) {

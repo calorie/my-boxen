@@ -15,7 +15,7 @@ class people::calorie::ruby(
   $vvm_rb_options = join($vvmopts, ' ')
 
   # install ruby
-  people::calorie::ruby::version { $rubies: }
+  people::calorie::ruby::versions { $rubies: }
 
   # init vvm-rb
   exec { 'init vvm-rb':

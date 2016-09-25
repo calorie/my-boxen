@@ -24,7 +24,7 @@ class people::calorie {
   include people::calorie::misc
   include people::calorie::nodejs
   include people::calorie::osx_settings
-  include people::calorie::packages
+  # include people::calorie::packages
   # include people::calorie::perl
   include people::calorie::ruby
 }

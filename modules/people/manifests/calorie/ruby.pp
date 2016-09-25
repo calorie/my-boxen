@@ -1,6 +1,7 @@
 class people::calorie::ruby(
   $vvmopts = []
 ) {
+  include openssl
   package { ['readline']: }
 
   $rubies         = keys(hiera_hash('ruby::version::env', {}))

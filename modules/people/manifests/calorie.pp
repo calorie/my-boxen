@@ -10,13 +10,11 @@ class people::calorie {
   }
 
   include heroku
-  include imagemagick
   include java
   include memcached
   # include mysql
   include pkgconfig
   include postgresql
-  include python
   include zsh
 
   include people::calorie::application

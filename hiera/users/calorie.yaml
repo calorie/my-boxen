@@ -6,11 +6,13 @@ boxen::personal::homebrew_packages:
   - direnv
   - docker
   - docker-machine
+  - doxygen
   - fontforge
   - gdb
   - htop
   - homebrew/dupes/grep
   - icu4c
+  - imagemagick
   - libtool
   - lua
   - luajit
@@ -19,6 +21,7 @@ boxen::personal::homebrew_packages:
   - nkf
   - peco
   - pstree
+  - python
   - reattach-to-user-namespace
   - rmtrash
   - ssh-copy-id

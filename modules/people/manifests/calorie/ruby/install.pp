@@ -11,11 +11,11 @@ define people::calorie::ruby::install($version = $title) {
   }
 
   exec { "Install default-gems for ${version}":
-    command     => "env -i zsh -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=${version} rbenv exec gem install `cat ${default_gems_path}`'",
+    command     => "env -i bash -c 'source ${boxen::config::home}/env.sh && RBENV_VERSION=${version} rbenv exec gem install `cat ${default_gems_path}`'",
     provider    => 'shell',
     onlyif      => "test -f ${default_gems_path}",
     subscribe   => [Ruby::Version[$version], File[$default_gems_path]],
     refreshonly => true,
-    require     => [Ruby::Version[$version], Package['zsh'], File[$default_gems_path]],
+    require     => [Ruby::Version[$version], File[$default_gems_path]],
   }
 }

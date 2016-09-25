@@ -7,6 +7,7 @@ define people::calorie::ruby::versions($version = $title) {
   $default_gems_content = join($default_gems, "\n")
 
   file { $default_gems_path:
+    ensure  => present,
     content => $default_gems_content
   }
 

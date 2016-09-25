@@ -33,4 +33,11 @@ class people::calorie::login_items {
   #   hidden  => true,
   #   require => Class['boxen::personal'],
   # }
+
+  osx_login_item { 'MacID':
+    name    => 'MacID',
+    path    => '/Applications/MacID.app',
+    hidden  => true,
+    require => Class['boxen::personal'],
+  }
 }

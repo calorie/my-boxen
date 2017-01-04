@@ -9,7 +9,8 @@ class people::calorie::dotfiles {
   exec { "echo y|${dotfiles}/script/setup":
     cwd     => $dotfiles,
     creates => "${home}/.vimrc",
-    require => [Repository[$dotfiles], Class['people::calorie::packages']],
+    timeout => 1800,
+    require => [Repository[$dotfiles], Class['boxen::personal'], Class['people::calorie::ruby']],
   }
 
   Git::Config::Global<| title == 'core.excludesfile' |> {

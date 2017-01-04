@@ -1,40 +1,38 @@
 class people::calorie::ruby(
   $vvmopts = []
 ) {
-  require openssl
-  package { ['readline']: }
+  include openssl
+  package {
+    [
+      'readline',
+      'libyaml',
+      'libffi'
+    ]:
+  }
 
-  $rubies = keys(hiera_hash('ruby::version::env', {}))
-  $global_version = hiera('ruby::global_version', 'system')
+  $rubies         = keys(hiera_hash('ruby::version::env', {}))
+  $global_version = hiera('ruby::global::version', 'system')
   $vvm_rb_options = join($vvmopts, ' ')
-  $gem_env = "source ${boxen::config::home}/env.sh && RBENV_VERSION=${global_version}"
+  $gem_env        = "source ${boxen::config::home}/env.sh && RBENV_VERSION=${global_version} rbenv exec"
 
   # install ruby
-  people::calorie::ruby::install { $rubies: }
-
-  # rbenv global
-  file { "${boxen::config::home}/rbenv/version":
-    ensure  => present,
-    owner   => $::boxen_user,
-    mode    => '0644',
-    content => "${global_version}\n",
-    require => [Ruby::Version[$global_version]],
-  }
+  people::calorie::ruby::versions { $rubies: }
 
   # init vvm-rb
   exec { 'init vvm-rb':
-    command  => "env -i zsh -c '${gem_env} vvm install latest ${vvm_rb_options}'",
-    creates  => "/Users/${::boxen_user}/.vvm-rb",
+    command  => "env -i SHELL=${boxen::config::homebrewdir}/bin/zsh zsh -c '${gem_env} vvm install latest ${vvm_rb_options}'",
     provider => 'shell',
-    require  => [Exec["Install default-gems for ${global_version}"], Package['zsh'], Package['mercurial']],
+    creates  => "/Users/${::boxen_user}/.vvm-rb",
+    timeout  => 1800,
+    require  => [Ruby::Version[$global_version], Ruby_Gem["vvm-rb for ${global_version}"], Package['zsh'], Class['people::calorie::mercurial']],
   }
 
   # init refe2
   exec { 'init refe2 database':
-    command  => "env -i zsh -c '${gem_env} bitclust setup --versions=1.9.3,2.2.0'",
-    creates  => "/Users/${::boxen_user}/.bitclust",
+    command  => "env -i SHELL=${boxen::config::homebrewdir}/bin/zsh zsh -c '${gem_env} bitclust setup --versions=2.3.0'",
     provider => 'shell',
-    require  => [Exec["Install default-gems for ${global_version}"], Package['zsh']],
+    creates  => "/Users/${::boxen_user}/.bitclust",
+    require  => [Ruby::Version[$global_version], Ruby_Gem["refe2 for ${global_version}"], Package['zsh']],
   }
 
   # nokogiri
@@ -45,25 +43,11 @@ class people::calorie::ruby(
       'libiconv',
     ]:
   }
-  exec { 'brew link libxml2 libxslt libiconv':
-    command     => 'brew link --force libxml2 libxslt libiconv',
-    provider    => 'shell',
-    subscribe   => [Package['libxml2'], Package['libxslt']],
-    refreshonly => true,
-    require     => [Package['libxml2'], Package['libxslt']],
-  }
   exec { 'bundle config nokogiri':
-    command     => "env -i zsh -c '${gem_env} bundle config --global build.nokogiri --use-system-libraries --with-iconv-dir=$(brew --prefix libiconv) --with-xml2-dir=$(brew --prefix libxml2) --with-xslt-dir=$(brew --prefix libxslt)'",
+    command     => "env -i SHELL=${boxen::config::homebrewdir}/bin/zsh zsh -c '${gem_env} bundle config --global build.nokogiri --use-system-libraries --with-iconv-dir=${boxen::config::homebrewdir}/opt/libiconv --with-xml2-dir=${boxen::config::homebrewdir}/opt/libxml2 --with-xslt-dir=${boxen::config::homebrewdir}/opt/libxslt'",
     provider    => 'shell',
     subscribe   => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
     refreshonly => true,
     require     => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
-  }
-  exec { 'brew unlink libxml2 libxslt libiconv':
-    command     => 'brew unlink libxml2 libxslt libiconv',
-    provider    => 'shell',
-    subscribe   => [Package['libxml2'], Package['libxslt']],
-    refreshonly => true,
-    require     => [Package['libxml2'], Package['libxslt']],
   }
 }

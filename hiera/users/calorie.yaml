@@ -1,12 +1,72 @@
 ---
+boxen::personal::homebrew_packages:
+  - automake
+  - cmake
+  - ctags
+  - direnv
+  - docker
+  - docker-machine
+  - doxygen
+  - fontforge
+  - gdb
+  - htop
+  - homebrew/dupes/grep
+  - icu4c
+  - imagemagick
+  - libtool
+  - lua
+  - luajit
+  - memcached
+  - mercurial
+  - mysql
+  - nkf
+  - peco
+  - pstree
+  - python
+  - reattach-to-user-namespace
+  - rmtrash
+  - ssh-copy-id
+  - the_silver_searcher
+  - tig
+  - tmux
+  - wget
+  - zlib
+boxen::personal::osx_apps:
+  - 1password
+  - alfred
+  - appcleaner
+  - bettertouchtool
+  - caffeine
+  - dropbox
+  - evernote
+  - firefox
+  - flux
+  - gyazo
+  - google-chrome
+  - google-japanese-ime
+  - iterm2
+  - keyboardcleantool
+  - macid
+  - skype
+  - slack
+  - teamviewer
+  - the-unarchiver
+  - vagrant
+  - virtualbox
+  - vlc
+boxen::personal::includes:
+  - homebrew
+  - people::calorie::homebrew_taps
+  - brewcask
+
 people::calorie::go::versions:
-  - 1.1.2
-people::calorie::go::global_version: "1.1.2"
-people::calorie::nodejs::nodejs_global: "0.10"
+  - 1.7
+people::calorie::go::global_version: 1.7
+people::calorie::nodejs::nodejs_global: '0.12'
 people::calorie::nodejs::global_modules:
   - coffee-script
   - grunt-cli
-people::calorie::perl::version: "5.21.4"
+people::calorie::perl::version: 5.21.4
 people::calorie::ruby::vvmopts:
   - --enable-multibyte
   - --with-features=big
@@ -36,3 +96,11 @@ people::calorie::ruby::vvmopts:
   - --disable-largefile
   - --with-modified-by=\"Yuu Shigetani\"
   - --with-compiledby=\"Yuu Shigetani\"
+people::calorie::ruby::default_gems:
+  - bundler
+  - rubygems-update
+  - pry
+  - tmuxinator
+  - vvm-rb
+  - refe2
+  - rubocop

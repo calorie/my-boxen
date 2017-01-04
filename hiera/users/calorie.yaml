@@ -54,6 +54,7 @@ boxen::personal::osx_apps:
   - vagrant
   - virtualbox
   - vlc
+  - xquartz
 boxen::personal::includes:
   - homebrew
   - people::calorie::homebrew_taps

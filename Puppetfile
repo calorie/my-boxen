@@ -56,7 +56,7 @@ github "repository",  "2.4.1"
 github "ruby",        "8.5.4"
 github "stdlib",      "4.7.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
-github "xquartz",     "1.2.1"
+# github "xquartz",     "1.2.1"
 
 # ---auto update---
 github "android",               "1.6.0"

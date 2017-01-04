@@ -1,7 +1,7 @@
 class people::calorie::login_items {
-  osx_login_item { 'Alfred 2':
-    name        => 'Alfred 2',
-    path        => '/Applications/Alfred 2.app',
+  osx_login_item { 'Alfred':
+    name        => 'Alfred 3',
+    path        => '/Applications/Alfred 3.app',
     hidden      => true,
     ensure      => present,
     require     => Package['alfred'],

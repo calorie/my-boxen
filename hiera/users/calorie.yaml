@@ -16,6 +16,7 @@ boxen::personal::homebrew_packages:
   - libtool
   - lua
   - luajit
+  - memcached
   - mercurial
   - mysql
   - nkf
@@ -28,7 +29,6 @@ boxen::personal::homebrew_packages:
   - the_silver_searcher
   - tig
   - tmux
-  - vim
   - wget
   - zlib
 boxen::personal::osx_apps:

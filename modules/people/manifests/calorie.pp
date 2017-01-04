@@ -11,7 +11,6 @@ class people::calorie {
 
   include heroku
   include java
-  include memcached
   # include mysql
   include pkgconfig
   include postgresql

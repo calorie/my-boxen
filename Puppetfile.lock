@@ -64,11 +64,6 @@ GITHUBTARBALL
     karabiner (1.0.8)
 
 GITHUBTARBALL
-  remote: boxen/puppet-memcached
-  specs:
-    memcached (2.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-mongodb
   specs:
     mongodb (2.6.1)
@@ -193,7 +188,6 @@ DEPENDENCIES
   inifile (= 1.4.1)
   java (= 1.8.4)
   karabiner (= 1.0.8)
-  memcached (= 2.0.0)
   module_data (= 0.0.4)
   mongodb (= 2.6.1)
   mysql (= 2.2.3)

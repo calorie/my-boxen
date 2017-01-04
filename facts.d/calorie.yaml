@@ -4,4 +4,4 @@
 # which must be a fact rather than configured with hiera because
 # of how Puppet's custom resource providers work.
 
-brewcask_root: /usr/local
+# brewcask_root: /usr/local

@@ -1,6 +1,7 @@
 ---
 boxen::personal::homebrew_packages:
   - automake
+  - boost
   - cmake
   - ctags
   - direnv

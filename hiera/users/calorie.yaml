@@ -20,10 +20,12 @@ boxen::personal::homebrew_packages:
   - memcached
   - mercurial
   - mysql
+  - neovim
   - nkf
   - peco
   - pstree
   - python
+  - python3
   - reattach-to-user-namespace
   - rmtrash
   - ssh-copy-id
@@ -76,7 +78,7 @@ people::calorie::ruby::vvmopts:
   - --enable-xim
   - --enable-rubyinterp
   - --enable-luainterp
-  - --with-lua-prefix=/opt/boxen/homebrew
+  - --with-lua-prefix=/usr/local/Homebrew
   - --enable-pythoninterp
   - --disable-python3interp
   - --disable-mzschemeinterp

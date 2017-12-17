@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "boxen",                  "~> 2.9.0"
+gem "boxen",                  "~> 3.1.1"
 gem "hiera",                  "~> 1.3.3"
 gem "librarian-puppet"
 gem "puppet",                 "3.7.1"
@@ -13,6 +13,7 @@ gem "open4",                  "~> 1.3.4"
 gem "rake",                   "10.3.2"
 gem "rspec-puppet",           "1.0.1"
 gem "deep_merge",             "~> 1.0"
+gem 'safe_yaml', '~> 1.0.4'
 
 group :test do
   gem "serverspec"

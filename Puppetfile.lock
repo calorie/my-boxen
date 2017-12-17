@@ -106,7 +106,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-postgresql
   specs:
-    postgresql (5.0.0)
+    postgresql (9.6.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-redis
@@ -137,11 +137,6 @@ GITHUBTARBALL
   remote: boxen/puppet-tmux
   specs:
     tmux (1.0.2)
-
-GITHUBTARBALL
-  remote: boxen/puppet-xquartz
-  specs:
-    xquartz (1.2.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-zsh
@@ -193,7 +188,7 @@ DEPENDENCIES
   phantomjs (= 3.0.0)
   php (= 2.0.1)
   pkgconfig (= 1.0.0)
-  postgresql (= 5.0.0)
+  postgresql (= 9.6.0)
   redis (= 4.0.1)
   repository (= 2.4.1)
   ruby (= 8.6.0)
@@ -201,6 +196,5 @@ DEPENDENCIES
   sudo (= 1.0.0)
   sysctl (= 1.0.1)
   tmux (= 1.0.2)
-  xquartz (= 1.2.1)
   zsh (= 1.0.1)
 

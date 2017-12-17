@@ -13,7 +13,7 @@ class people::calorie {
   include java
   # include mysql
   include pkgconfig
-  include postgresql
+  # include postgresql
   include zsh
 
   include people::calorie::application
@@ -24,5 +24,6 @@ class people::calorie {
   include people::calorie::nodejs
   include people::calorie::osx_settings
   # include people::calorie::perl
+  include people::calorie::python
   include people::calorie::ruby
 }

@@ -6,17 +6,17 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.11.1)
+    boxen (3.13.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-brewcask
   specs:
-    brewcask (0.0.7)
+    brewcask (0.0.10)
 
 GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
-    dnsmasq (2.0.2)
+    dnsmasq (2.0.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-foreman
@@ -24,14 +24,9 @@ GITHUBTARBALL
     foreman (1.2.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-gcc
-  specs:
-    gcc (3.0.2)
-
-GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
-    git (2.11.0)
+    git (2.13.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-go
@@ -46,12 +41,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (2.1.0)
+    homebrew (2.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
-    hub (1.4.4)
+    hub (1.4.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-java
@@ -76,7 +71,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
-    nginx (1.7.0)
+    nginx (1.9.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
@@ -126,7 +121,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (8.5.4)
+    ruby (8.6.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -175,23 +170,22 @@ GITHUBTARBALL
 
 DEPENDENCIES
   android (= 1.6.0)
-  boxen (= 3.11.1)
-  brewcask (= 0.0.7)
-  dnsmasq (= 2.0.2)
+  boxen (= 3.13.0)
+  brewcask (= 0.0.10)
+  dnsmasq (= 2.0.4)
   foreman (= 1.2.0)
-  gcc (= 3.0.2)
-  git (= 2.11.0)
+  git (= 2.13.0)
   go (= 2.1.0)
   heroku (= 2.1.1)
-  homebrew (= 2.1.0)
-  hub (= 1.4.4)
+  homebrew (= 2.2.0)
+  hub (= 1.4.5)
   inifile (= 1.4.1)
   java (= 1.8.4)
   karabiner (= 1.0.8)
   module_data (= 0.0.4)
   mongodb (= 2.6.1)
   mysql (= 2.2.3)
-  nginx (= 1.7.0)
+  nginx (= 1.9.0)
   nodejs (= 5.0.9)
   openssl (= 1.0.0)
   osx (= 2.8.0)
@@ -202,7 +196,7 @@ DEPENDENCIES
   postgresql (= 5.0.0)
   redis (= 4.0.1)
   repository (= 2.4.1)
-  ruby (= 8.5.4)
+  ruby (= 8.6.0)
   stdlib (= 4.7.0)
   sudo (= 1.0.0)
   sysctl (= 1.0.1)

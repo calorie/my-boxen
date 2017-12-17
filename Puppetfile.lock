@@ -66,7 +66,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-mysql
   specs:
-    mysql (2.2.3)
+    mysql (2.2.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-nginx
@@ -86,7 +86,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-osx
   specs:
-    osx (2.8.0)
+    osx (2.8.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-phantomjs
@@ -111,7 +111,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-redis
   specs:
-    redis (4.0.1)
+    redis (4.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-repository
@@ -179,17 +179,17 @@ DEPENDENCIES
   karabiner (= 1.0.8)
   module_data (= 0.0.4)
   mongodb (= 2.6.1)
-  mysql (= 2.2.3)
+  mysql (= 2.2.5)
   nginx (= 1.9.0)
   nodejs (= 5.0.9)
   openssl (= 1.0.0)
-  osx (= 2.8.0)
+  osx (= 2.8.1)
   perl (= 1.1.2)
   phantomjs (= 3.0.0)
   php (= 2.0.1)
   pkgconfig (= 1.0.0)
   postgresql (= 9.6.0)
-  redis (= 4.0.1)
+  redis (= 4.0.2)
   repository (= 2.4.1)
   ruby (= 8.6.0)
   stdlib (= 4.7.0)

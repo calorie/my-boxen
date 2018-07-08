@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/boxen/puppet-nodejs.git
+  ref: high-sierra
+  sha: e28943eca2eda96cba97b8841bf968c6279d7256
+  specs:
+    puppet-nodejs (0.0.1)
+
+GIT
+  remote: https://github.com/boxen/puppet-ruby.git
+  ref: high-sierra
+  sha: e27c7c68d27efa2cad28b474c7e766f87cebe43b
+  specs:
+    puppet-ruby (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-android
   specs:
@@ -6,7 +20,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.13.0)
+    boxen (4.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-brewcask
@@ -16,7 +30,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
-    dnsmasq (2.0.4)
+    dnsmasq (3.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-foreman
@@ -26,7 +40,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
-    git (2.13.0)
+    git (3.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-go
@@ -41,7 +55,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (2.2.0)
+    homebrew (3.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
@@ -72,11 +86,6 @@ GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
     nginx (1.9.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-nodejs
-  specs:
-    nodejs (5.0.9)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -117,11 +126,6 @@ GITHUBTARBALL
   remote: boxen/puppet-repository
   specs:
     repository (2.4.1)
-
-GITHUBTARBALL
-  remote: boxen/puppet-ruby
-  specs:
-    ruby (8.6.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -165,14 +169,14 @@ GITHUBTARBALL
 
 DEPENDENCIES
   android (= 1.6.0)
-  boxen (= 3.13.0)
+  boxen (= 4.0.0)
   brewcask (= 0.0.10)
-  dnsmasq (= 2.0.4)
+  dnsmasq (= 3.0.0)
   foreman (= 1.2.0)
-  git (= 2.13.0)
+  git (= 3.0.0)
   go (= 2.1.0)
   heroku (= 2.1.1)
-  homebrew (= 2.2.0)
+  homebrew (= 3.0.0)
   hub (= 1.4.5)
   inifile (= 1.4.1)
   java (= 1.8.4)
@@ -181,7 +185,6 @@ DEPENDENCIES
   mongodb (= 2.6.1)
   mysql (= 2.2.5)
   nginx (= 1.9.0)
-  nodejs (= 5.0.9)
   openssl (= 1.0.0)
   osx (= 2.8.1)
   perl (= 1.1.2)
@@ -189,9 +192,10 @@ DEPENDENCIES
   php (= 2.0.1)
   pkgconfig (= 1.0.0)
   postgresql (= 9.6.0)
+  puppet-nodejs (= 0.0.1)
+  puppet-ruby (= 0.0.1)
   redis (= 4.0.2)
   repository (= 2.4.1)
-  ruby (= 8.6.0)
   stdlib (= 4.7.0)
   sudo (= 1.0.0)
   sysctl (= 1.0.1)

@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-gem "boxen",                  "~> 3.1.1"
-gem "hiera",                  "~> 1.3.3"
+gem "boxen",                  "4.0.0"
+gem "hiera",                  "~> 3.0"
 gem "librarian-puppet"
-gem "puppet",                 "3.7.1"
+gem "puppet",                 "~> 4.0"
 gem "librarianp",
   git: "https://github.com/voxpupuli/librarian.git",
   branch: "librarianp"
@@ -13,6 +13,8 @@ gem "open4",                  "~> 1.3.4"
 gem "rake",                   "10.3.2"
 gem "rspec-puppet",           "1.0.1"
 gem "deep_merge",             "~> 1.0"
+gem "CFPropertyList"
+
 gem 'safe_yaml', '~> 1.0.4'
 
 group :test do

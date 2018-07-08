@@ -39,7 +39,7 @@ github "module_data", "0.0.4", :repo => "ripienaar/puppet-module-data"
 # some/most of these if you want, but it's not recommended.
 
 # github "brewcask",    "0.0.10"
-mod "brewcask",    "0.0.11", :git => "https://github.com/calorie/puppet-brewcask.git", :ref => "master"
+mod "brewcask",    "0.0.1", :git => "https://github.com/calorie/puppet-brewcask.git", :ref => "master"
 github "dnsmasq",     "3.0.0"
 github "foreman",     "1.2.0"
 # mod "gcc", "0.0.1", :git => "https://github.com/boxen/puppet-gcc.git", :ref => "abc7639"

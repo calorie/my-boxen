@@ -76,7 +76,7 @@ people::calorie::ruby::vvmopts:
   - --enable-xim
   - --enable-rubyinterp
   - --enable-luainterp
-  - --with-lua-prefix=/usr/local/Homebrew
+  - --with-lua-prefix=/usr/local
   - --enable-pythoninterp
   - --disable-python3interp
   - --disable-mzschemeinterp

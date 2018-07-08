@@ -18,7 +18,8 @@ class people::calorie {
 
   include people::calorie::application
   include people::calorie::dotfiles
-  include people::calorie::go
+  # include people::calorie::go
+  include people::calorie::mercurial
   include people::calorie::misc
   # include people::calorie::nodejs
   include people::calorie::osx_settings

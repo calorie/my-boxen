@@ -1,24 +1,6 @@
 class people::calorie::application {
-  include chrome
-  include firefox
-  include alfred
-  include skype
-  include appcleaner
-  # include dropbox
-  # include evernote
-  include flux
   include karabiner
   include karabiner::login_item
-  # include teamviewer
-  include virtualbox
-  # include vagrant
-  include caffeine
-  include better_touch_tools
-  # include vlc
-  include onepassword
-  # include gyazo
-  include google_japanese_input
-  include macid
 
   include people::calorie::login_items
 
@@ -29,7 +11,7 @@ class people::calorie::application {
     require         => Package['lua'],
   }
 
-  # keyremap4macbook
+  # karabiner
   karabiner::private_xml{ 'private.xml':
     source => "${boxen::config::repodir}/modules/people/manifests/calorie/private.xml"
   }
@@ -39,11 +21,4 @@ class people::calorie::application {
   karabiner::exec { 'set repeat.wait 30':
     unless => 'repeat.wait=30'
   }
-
-  # vagrant
-  #vagrant::plugin {
-  #   [
-  #     'vagrant-omnibus',
-  #   ]:
-  # }
 }

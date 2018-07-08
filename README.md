@@ -137,8 +137,8 @@ This template project provides the following by default:
 * Node.js 0.12
 * Ruby 1.9.3
 * Ruby 2.0.0
-* Ruby 2.1.7
-* Ruby 2.2.3
+* Ruby 2.1.8
+* Ruby 2.2.4
 * ack
 * Findutils
 * GNU tar
@@ -302,7 +302,7 @@ fork.
 You'll still be the maintainer, you'll still own the issues and PRs.
 It'll just be listed under the boxen org so folks can find it more easily.
 
-##upgrading boxen
+## upgrading boxen
 See [FAQ-Upgrading](https://github.com/boxen/our-boxen/blob/master/docs/faq.md#q-how-do-you-upgrade-your-boxen-from-the-public-our-boxen).
 
 ## Integrating with Github Enterprise

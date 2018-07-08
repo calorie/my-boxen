@@ -1,28 +1,28 @@
 class people::calorie {
-  include iterm2::stable
-  include mysql
-  include postgresql
-  include imagemagick
-  include libtool
-  include zsh
-  include python
-  include pkgconfig
-  include java
+  # dirty way of ensuring that installer can install things
+  sudoers { 'installer':
+    users    => $::boxen_user,
+    hosts    => 'ALL',
+    commands => [
+      '(ALL) SETENV:NOPASSWD: /usr/sbin/installer',
+    ],
+    type     => 'user_spec',
+  }
+
   include heroku
-  include memcached
+  include java
+  # include mysql
+  include pkgconfig
+  # include postgresql
+  include zsh
 
-  include people::calorie::packages
-  include people::calorie::osx_settings
   include people::calorie::application
-  include people::calorie::ruby
-  # include people::calorie::nodejs
   include people::calorie::dotfiles
-  # include people::calorie::go
-  include people::calorie::docker
-  # include people::calorie::perl
+  include people::calorie::go
   include people::calorie::misc
-
-  # include projects::hpcss
-  # include projects::hekk
-  # include projects::precent
+  # include people::calorie::nodejs
+  include people::calorie::osx_settings
+  # include people::calorie::perl
+  include people::calorie::python
+  include people::calorie::ruby
 }

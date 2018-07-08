@@ -1,29 +1,22 @@
 ---
 ruby_opts: &ruby_opts
-  LDFLAGS: "-L/opt/X11/lib"
-  RUBY_CONFIGURE_OPTS: "--enable-shared --with-openssl-dir=/opt/boxen/homebrew/opt/openssl --with-readline-dir=/opt/boxen/homebrew/opt/readline"
+  LDFLAGS: '-L/usr/local/Homebrew/opt/openssl/lib'
+  CPPFLAGS: '-I/usr/local/Homebrew/opt/openssl/include'
+  RUBY_CONFIGURE_OPTS: '--enable-shared --with-openssl-dir=/usr/local/Homebrew/opt/openssl --with-readline-dir=/usr/local/Homebrew/opt/readline'
 ruby::version::env:
-  2.2.1:
+  2.3.1:
     <<: *ruby_opts
-ruby::global_version: "2.2.1"
-ruby::default_gems:
-  - bundler
-  - rubygems-update
-  - pry
-  - tmuxinator
-  - vvm-rb
-  - refe2
-  - rubocop
-ruby::rbenv_plugins:
+ruby::global::version: 2.3.1
+ruby::rbenv::plugins:
   ruby-build:
-    ensure: v20150303
+    ensure: v20160913
     source: sstephenson/ruby-build
   rbenv-binstubs:
-    ensure: v1.4
+    ensure: v1.5
     source: ianheggie/rbenv-binstubs
   rbenv-update:
     ensure: master
     source: rkh/rbenv-update
-go::chgo_version: "master"
-go::chgo_source: "mattheath/chgo"
-alfred::version: "2.8.2_432"
+ruby::build::ensure: v20160913
+go::chgo_version: master
+go::chgo_source: mattheath/chgo

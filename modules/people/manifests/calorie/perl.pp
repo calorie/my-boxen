@@ -1,7 +1,7 @@
-class people::calorie::perl {
-  include perl
-
+class people::calorie::perl(
   $version = '5.21.4'
+) {
+  include perl
 
   class { 'perl::global': version => $version }
 

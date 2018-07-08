@@ -1,7 +1,8 @@
-class people::calorie::go {
-  include go
-  $versions = ['1.1.2']
+class people::calorie::go(
+  $versions       = ['1.1.2'],
   $global_version = '1.1.2'
+) {
+  include go
 
   go::version { $versions: }
 

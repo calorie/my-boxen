@@ -46,8 +46,8 @@ class people::calorie::ruby(
   exec { 'bundle config nokogiri':
     command     => "env -i SHELL=${boxen::config::homebrewdir}/bin/zsh zsh -c '${gem_env} bundle config --global build.nokogiri --use-system-libraries --with-iconv-dir=${boxen::config::homebrewdir}/opt/libiconv --with-xml2-dir=${boxen::config::homebrewdir}/opt/libxml2 --with-xslt-dir=${boxen::config::homebrewdir}/opt/libxslt'",
     provider    => 'shell',
-    subscribe   => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
+    subscribe   => [Ruby::Version[$global_version], Package['libxml2'], Package['libxslt'], Package['libiconv']],
     refreshonly => true,
-    require     => [Package['libxml2'], Package['libxslt'], Package['libiconv']],
+    require     => [Ruby::Version[$global_version], Package['libxml2'], Package['libxslt'], Package['libiconv']],
   }
 }

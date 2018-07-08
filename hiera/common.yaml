@@ -1,8 +1,8 @@
 ---
 ruby_opts: &ruby_opts
-  LDFLAGS: '-L/usr/local/Homebrew/opt/openssl/lib'
-  CPPFLAGS: '-I/usr/local/Homebrew/opt/openssl/include'
-  RUBY_CONFIGURE_OPTS: '--enable-shared --with-openssl-dir=/usr/local/Homebrew/opt/openssl --with-readline-dir=/usr/local/Homebrew/opt/readline'
+  LDFLAGS: '-L/usr/local/opt/openssl/lib'
+  CPPFLAGS: '-I/usr/local/opt/openssl/include'
+  RUBY_CONFIGURE_OPTS: '--enable-shared --with-openssl-dir=/usr/local/opt/openssl --with-readline-dir=/usr/local/opt/readline'
 ruby::version::env:
   2.3.1:
     <<: *ruby_opts

@@ -11,7 +11,7 @@ boxen::personal::homebrew_packages:
   - fontforge
   - gdb
   - htop
-  - homebrew/dupes/grep
+  - grep
   - icu4c
   - imagemagick
   - libtool
@@ -59,7 +59,6 @@ boxen::personal::osx_apps:
   - xquartz
 boxen::personal::includes:
   - homebrew
-  - people::calorie::homebrew_taps
   - brewcask
 
 people::calorie::go::versions:

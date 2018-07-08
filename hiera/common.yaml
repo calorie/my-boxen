@@ -21,11 +21,9 @@ ruby::rbenv_plugins:
   rbenv-binstubs:
     ensure: v1.4
     source: ianheggie/rbenv-binstubs
-  rbenv-ctags:
-    ensure: v1.0.1
-    source: tpope/rbenv-ctags
   rbenv-update:
     ensure: master
     source: rkh/rbenv-update
 go::chgo_version: "master"
 go::chgo_source: "mattheath/chgo"
+alfred::version: "2.8.2_432"
